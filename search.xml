@@ -41,9 +41,9 @@
   <entry>
     <title>数学公式test</title>
     <url>/2021/10/12/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8Ftest/</url>
-    <content><![CDATA[<p>$$<br>x^2+y^2=z^2 \tag{1$’$}<br>$$<br>$$<br>x^3+y^3=z^3<br>$$<br>$$<br>x^4+y^4=z^4 \tag{<em>}<br>$$<br>$$<br>x^5+y^5=z^5 \tag</em>{*}<br>$$<br>$$<br>x^6+y^6=z^6 \tag{1-1}<br>$$</p>
+    <content><![CDATA[<p>$$<br>x^2+y^2=z^2 \tag{1$’$}<br>$$<br>$$<br>x^3+y^3=z^3<br>$$<br>$$<br>x^4+y^4=z^4<br>$$<br>$$<br>x^5+y^5=z^5<br>$$<br>$$<br>x^6+y^6=z^6<br>$$</p>
 <p>$$<br>z = \overbrace{<br>   \underbrace{x}_\text{real} + i<br>   \underbrace{y}_\text{imaginary}<br>  }^\text{complex number}<br>$$</p>
-<p>$$<br>f(x) = \left{<br>  \begin{array}{lr}<br>    x^2 &amp; : x &lt; 0\<br>    x^3 &amp; : x \ge 0<br>  \end{array}<br>\right.<br>$$</p>
+<p>$$<br>f(x) = \left<br>{<br>  \begin{array}{lr}<br>    x^2 &amp; : x &lt; 0\<br>    x^3 &amp; : x \ge 0<br>  \end{array}<br>\right.<br>$$</p>
 <p>$$<br>u(x) =<br>  \begin{cases}<br>   \exp{x} &amp; \text{if } x \geq 0 \<br>   1       &amp; \text{if } x &lt; 0<br>  \end{cases}<br>$$<br>$$<br>\left{  </p>
 <p>\begin{array}{c}    </p>
 <p>a_1x+b_1y+c_1z=d_1 \     </p>
