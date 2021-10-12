@@ -1,25 +1,3 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
-  <entry>
-    <title>hexo命令</title>
-    <url>/2021/10/12/hexo%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p><code>hexo new &quot;article title&quot;</code></p>
-<p>新建一篇文章</p>
-<p><code>hexo g</code></p>
-<p>生成静态网页</p>
-<p><code>hexo d</code></p>
-<p>上传到github</p>
-<p><code>hexo s</code></p>
-<p>本地服务查看页面</p>
-<p><code>hexo clean</code></p>
-<p>网站重新部署后需要执行此命令清理public文件夹内容</p>
-<p><code>hexo new page newPage</code></p>
-<p>创建一个页面，比如<code>hexo new page tags</code>创建tags(标签)页面</p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
-      </tags>
-  </entry>
 </search>
