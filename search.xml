@@ -3,10 +3,10 @@
   <entry>
     <title>hexo命令</title>
     <url>/2021/10/12/hexo%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<span id="more"></span>
-
-<p><code>hexo new &quot;article title&quot;</code></p>
+    <content><![CDATA[<p><code>hexo new &quot;article title&quot;</code></p>
 <p>新建一篇文章</p>
+<span id="more"></span>
+
 <p><code>hexo g</code></p>
 <p>生成静态网页</p>
 <p><code>hexo d</code></p>
@@ -25,9 +25,9 @@
   <entry>
     <title>Hello World</title>
     <url>/2021/10/11/hello-world/</url>
-    <content><![CDATA[<span id="more"></span>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
 
-<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
