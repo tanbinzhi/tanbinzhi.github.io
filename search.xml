@@ -1,37 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Hello World</title>
+    <url>/2021/10/11/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
     <title>数学公式test</title>
     <url>/2021/10/12/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8Ftest/</url>
-    <content><![CDATA[<p>sin(A+B)=sinAcosB+cosAsinB</p>
-<p>sin(A-B)=sinAcosB-cosAsinB</p>
-<p>cos(A+B)=cosAcosB-sinAsinB</p>
-<p>cos(A-B)=cosAcosB+sinAsinB</p>
-<p>tan(A+B)=(tanA+tanB)/(1-tanAtanB)</p>
-<p>tan(A-B)=(tanA-tanB)/(1+tanAtanB)</p>
-<p>cot(A+B)=(cotAcotB-1)/(cotB+cotA)</p>
-<p>cot(A-B)=(cotAcotB+1)/(cotB-cotA)</p>
-<p>倍角公式</p>
-<p>Sin2A=2SinACosA</p>
-<p>Cos2A=CosA^2-SinA^2=1-2SinA^2=2CosA^2-1</p>
-<p>tan2A=2tanA/1-tanA^2</p>
-<p>三倍角公式</p>
-<p>tan3a=tana·tan(π/3+a)·tan(π/3-a)</p>
-<p>和差化积</p>
-<p>sin(a)+sin(b)=2sin[(a+b)/2]cos[(a-b)/2]</p>
-<p>sin(a)-sin(b)=2cos[(a+b)/2]sin[(a-b)/2]</p>
-<p>cos(a)+cos(b)=2cos[(a+b)/2]cos[(a-b)/2]</p>
-<p>cos(a)-cos(b)=-2sin[(a+b)/2]sin[(a-b)/2]</p>
-<p>tanA+tanB=sin(A+B)/cosAcosB</p>
-<p>积化和差</p>
-<p>sin(a)sin(b)=-1/2*[cos(a+b)-cos(a-b)]</p>
-<p>cos(a)cos(b)=1/2*[cos(a+b)+cos(a-b)]</p>
-<p>sin(a)cos(b)=1/2*[sin(a+b)+sin(a-b)]</p>
-<p>cos(a)sin(b)=1/2*[sin(a+b)-sin(a-b)]</p>
-<p>诱导公式</p>
-<p>sin(-a)=-sin(a)</p>
-<p>cos(-a)=cos(a)</p>
-<p>sin(π/2-a)=cos(a)</p>
+    <content><![CDATA[<p>$$<br>x^2+y^2=z^2 \tag{1$’$}<br>$$<br>$$<br>x^3+y^3=z^3<br>$$<br>$$<br>x^4+y^4=z^4 \tag{<em>}<br>$$<br>$$<br>x^5+y^5=z^5 \tag</em>{*}<br>$$<br>$$<br>x^6+y^6=z^6 \tag{1-1}<br>$$</p>
+<p>$$<br>z = \overbrace{<br>   \underbrace{x}_\text{real} + i<br>   \underbrace{y}_\text{imaginary}<br>  }^\text{complex number}<br>$$</p>
+<p>$$<br>f(x) = \left{<br>  \begin{array}{lr}<br>    x^2 &amp; : x &lt; 0\<br>    x^3 &amp; : x \ge 0<br>  \end{array}<br>\right.<br>$$</p>
+<p>$$<br>u(x) =<br>  \begin{cases}<br>   \exp{x} &amp; \text{if } x \geq 0 \<br>   1       &amp; \text{if } x &lt; 0<br>  \end{cases}<br>$$<br>$$<br>\left{  </p>
+<p>\begin{array}{c}    </p>
+<p>a_1x+b_1y+c_1z=d_1 \     </p>
+<p>a_2x+b_2y+c_2z=d_2 \     </p>
+<p>a_3x+b_3y+c_3z=d_3</p>
+<p> \end{array} \right.<br>$$</p>
+<p>$$<br>h(\theta) = \sum_{j = 0} ^n \theta_j x_j<br>$$</p>
+<p>$$<br>J(\theta) = \frac{1}{2m}\sum_{i = 0} ^m(y^i - h_\theta (x^i))^2<br>$$</p>
+<p>$$<br>\frac{\partial J(\theta)}{\partial\theta_j}=-\frac1m\sum_{i=0}^m(y^i-h_\theta(x^i))x^i_j<br>$$</p>
+<p>$$<br>\begin{aligned}<br>\frac{\partial J(\theta)}{\partial\theta_j}<br>&amp; = -\frac1m\sum_{i=0}^m(y^i-h_\theta(x^i)) \frac{\partial}{\partial\theta_j}(y^i-h_\theta(x^i)) \<br>&amp; = -\frac1m\sum_{i=0}^m(y^i-h_\theta(x^i)) \frac{\partial}{\partial\theta_j}(\sum_{j=0}^n\theta_jx_j^i-y^i) \<br>&amp; = -\frac1m\sum_{i=0}^m(y^i-h_\theta(x^i))x^i_j<br>\end{aligned}<br>$$</p>
+<p>$$<br>a =<br>   \begin{cases}<br>     \int x, \mathrm{d} x\<br>     b^2<br>   \end{cases}<br>$$</p>
 ]]></content>
       <tags>
         <tag>test</tag>
@@ -56,23 +59,5 @@
       <tags>
         <tag>hexo</tag>
       </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/10/11/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
   </entry>
 </search>
