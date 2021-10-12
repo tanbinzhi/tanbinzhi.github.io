@@ -19,6 +19,26 @@
 ]]></content>
   </entry>
   <entry>
+    <title>hexo命令</title>
+    <url>/2021/10/12/hexo%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p><code>hexo new &quot;article title&quot;</code></p>
+<p>新建一篇文章</p>
+<p><code>hexo g</code></p>
+<p>生成静态网页</p>
+<p><code>hexo d</code></p>
+<p>上传到github</p>
+<p><code>hexo s</code></p>
+<p>本地服务查看页面</p>
+<p><code>hexo clean</code></p>
+<p>网站重新部署后需要执行此命令清理public文件夹内容</p>
+<p><code>hexo new page newPage</code></p>
+<p>创建一个页面，比如<code>hexo new page tags</code>创建tags(标签)页面</p>
+]]></content>
+      <tags>
+        <tag>hexo</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>数学公式test</title>
     <url>/2021/10/12/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8Ftest/</url>
     <content><![CDATA[<p>$$<br>x^2+y^2=z^2 \tag{1$’$}<br>$$<br>$$<br>x^3+y^3=z^3<br>$$<br>$$<br>x^4+y^4=z^4 \tag{<em>}<br>$$<br>$$<br>x^5+y^5=z^5 \tag</em>{*}<br>$$<br>$$<br>x^6+y^6=z^6 \tag{1-1}<br>$$</p>
@@ -38,26 +58,6 @@
 ]]></content>
       <tags>
         <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>hexo命令</title>
-    <url>/2021/10/12/hexo%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p><code>hexo new &quot;article title&quot;</code></p>
-<p>新建一篇文章</p>
-<p><code>hexo g</code></p>
-<p>生成静态网页</p>
-<p><code>hexo d</code></p>
-<p>上传到github</p>
-<p><code>hexo s</code></p>
-<p>本地服务查看页面</p>
-<p><code>hexo clean</code></p>
-<p>网站重新部署后需要执行此命令清理public文件夹内容</p>
-<p><code>hexo new page newPage</code></p>
-<p>创建一个页面，比如<code>hexo new page tags</code>创建tags(标签)页面</p>
-]]></content>
-      <tags>
-        <tag>hexo</tag>
       </tags>
   </entry>
 </search>
