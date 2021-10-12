@@ -38,34 +38,4 @@
         <tag>hexo</tag>
       </tags>
   </entry>
-  <entry>
-    <title>数学公式test</title>
-    <url>/2021/10/12/%E6%95%B0%E5%AD%A6%E5%85%AC%E5%BC%8Ftest/</url>
-    <content><![CDATA[<p>$$<br>x^2+y^2=z^2 \tag{1<svg xmlns:xlink="http://www.w3.org/1999/xlink" width="0.685ex" height="2.343ex" style="vertical-align: -0.171ex;" viewBox="0 -934.9 294.8 1008.6" role="img" focusable="false" xmlns="http://www.w3.org/2000/svg" aria-labelledby="MathJax-SVG-1-Title">
-<title id="MathJax-SVG-1-Title">'</title>
-<defs aria-hidden="true">
-<path stroke-width="1" id="E1-MJMAIN-2032" d="M79 43Q73 43 52 49T30 61Q30 68 85 293T146 528Q161 560 198 560Q218 560 240 545T262 501Q262 496 260 486Q259 479 173 263T84 45T79 43Z"></path>
-</defs>
-<g stroke="currentColor" fill="currentColor" stroke-width="0" transform="matrix(1 0 0 -1 0 0)" aria-hidden="true">
- <use transform="scale(0.707)" xlink:href="#E1-MJMAIN-2032" x="0" y="583"></use>
-</g>
-</svg>}<br>$$<br>$$<br>x^3+y^3=z^3<br>$$<br>$$<br>x^4+y^4=z^4<br>$$<br>$$<br>x^5+y^5=z^5<br>$$<br>$$<br>x^6+y^6=z^6<br>$$</p>
-<p>$$<br>z = \overbrace{<br>   \underbrace{x}_\text{real} + i<br>   \underbrace{y}_\text{imaginary}<br>  }^\text{complex number}<br>$$</p>
-<p>$$<br>f(x) = \left<br>{<br>  \begin{array}{lr}<br>    x^2 &amp; : x &lt; 0\<br>    x^3 &amp; : x \ge 0<br>  \end{array}<br>\right.<br>$$</p>
-<p>$$<br>u(x) =<br>  \begin{cases}<br>   \exp{x} &amp; \text{if } x \geq 0 \<br>   1       &amp; \text{if } x &lt; 0<br>  \end{cases}<br>$$<br>$$<br>\left{  </p>
-<p>\begin{array}{c}    </p>
-<p>a_1x+b_1y+c_1z=d_1 \     </p>
-<p>a_2x+b_2y+c_2z=d_2 \     </p>
-<p>a_3x+b_3y+c_3z=d_3</p>
-<p> \end{array} \right.<br>$$</p>
-<p>$$<br>h(\theta) = \sum_{j = 0} ^n \theta_j x_j<br>$$</p>
-<p>$$<br>J(\theta) = \frac{1}{2m}\sum_{i = 0} ^m(y^i - h_\theta (x^i))^2<br>$$</p>
-<p>$$<br>\frac{\partial J(\theta)}{\partial\theta_j}=-\frac1m\sum_{i=0}^m(y^i-h_\theta(x^i))x^i_j<br>$$</p>
-<p>$$<br>\begin{aligned}<br>\frac{\partial J(\theta)}{\partial\theta_j}<br>&amp; = -\frac1m\sum_{i=0}^m(y^i-h_\theta(x^i)) \frac{\partial}{\partial\theta_j}(y^i-h_\theta(x^i)) \<br>&amp; = -\frac1m\sum_{i=0}^m(y^i-h_\theta(x^i)) \frac{\partial}{\partial\theta_j}(\sum_{j=0}^n\theta_jx_j^i-y^i) \<br>&amp; = -\frac1m\sum_{i=0}^m(y^i-h_\theta(x^i))x^i_j<br>\end{aligned}<br>$$</p>
-<p>$$<br>a =<br>   \begin{cases}<br>     \int x, \mathrm{d} x\<br>     b^2<br>   \end{cases}<br>$$</p>
-]]></content>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
 </search>
