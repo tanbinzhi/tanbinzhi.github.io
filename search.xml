@@ -23,7 +23,84 @@
   <entry>
     <title>JavaSE</title>
     <url>/2021/10/12/JavaSE/</url>
-    <content><![CDATA[]]></content>
+    <content><![CDATA[<h1 id="Java-语⾔特点"><a href="#Java-语⾔特点" class="headerlink" title="Java 语⾔特点"></a>Java 语⾔特点</h1><p>⾯向对象（封装，继承，多态）</p>
+<p>平台⽆关性（ Java 虚拟机实现平台⽆关性）</p>
+<p>⽀持多线程</p>
+<p>⽀持⽹络编程</p>
+<p>编译与解释并存</p>
+<h1 id="JVM-JDK-和-JRE"><a href="#JVM-JDK-和-JRE" class="headerlink" title="JVM JDK 和 JRE"></a>JVM JDK 和 JRE</h1><p>Java 虚拟机（JVM）是运⾏ Java 字节码的虚拟机。JVM 有针对不同系统的特定实现 （Windows，Linux，macOS），⽬的是使⽤相同的字节码，它们都会给出相同的结果。字节码 和不同系统的 JVM 实现是 Java 语⾔“⼀次编译，随处可以运⾏”的关键所在。 </p>
+<p>JDK 拥有 JRE 所拥有的⼀切，还有编 译器（javac）和⼯具（如 javadoc 和 jdb）。它能够创建和编译程序。</p>
+<p> JRE 是 Java 运⾏时环境。它是运⾏已编译 Java 程序所需的所有内容的集合，包括 Java 虚拟机 （JVM），Java 类库，java 命令和其他的⼀些基础构件。但是，它不能⽤于创建新程序。 </p>
+<p>一般情况下，如果只是为了运⾏⼀下 Java 程序的话，那么只需要安装 JRE 就可以了。如果需要进⾏⼀ 些 Java 编程⽅⾯的⼯作，那么就需要安装 JDK 了。</p>
+<h1 id="字符型常量和字符串常量的区别"><a href="#字符型常量和字符串常量的区别" class="headerlink" title="字符型常量和字符串常量的区别"></a>字符型常量和字符串常量的区别</h1><p>形式上: 字符常量是单引号引起的⼀个字符; 字符串常量是双引号引起的若⼲个字符 </p>
+<p>含义上: 字符常量相当于⼀个整型值( ASCII 值),可以参加表达式运算; 字符串常量代表⼀个地 址值(该字符串在内存中存放位置) </p>
+<p>占内存⼤⼩：字符常量只占 2 个字节; 字符串常量占若⼲个字节 (注意： char 在 Java 中占两 个字节)</p>
+<h1 id="构造器-Constructor-是否可被-override"><a href="#构造器-Constructor-是否可被-override" class="headerlink" title="构造器 Constructor 是否可被 override"></a>构造器 Constructor 是否可被 override</h1><p>Constructor 不能被 override（重写）,但是可以 overload（重载）,所以你可以看到⼀个类中有多 个构造函数的情况。</p>
+<h1 id="重载和重写的区别"><a href="#重载和重写的区别" class="headerlink" title="重载和重写的区别"></a>重载和重写的区别</h1><p>重载就是同样的⼀个⽅法能够根据输⼊数据的不同，做出不同的处理 </p>
+<p>重写就是当⼦类继承⾃⽗类的相同⽅法，输⼊数据⼀样，但要做出有别于⽗类的响应时，就要覆盖⽗类⽅法</p>
+<table>
+<thead>
+<tr>
+<th>区别点</th>
+<th>重载</th>
+<th>重写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>范围</td>
+<td>同一个类</td>
+<td>子类</td>
+</tr>
+<tr>
+<td>参数列表</td>
+<td>必须不同</td>
+<td>必须一致</td>
+</tr>
+<tr>
+<td>返回类型</td>
+<td>可不同</td>
+<td>⼦类⽅法返回值类型应⽐⽗类⽅法返回值类型更⼩或相等(子类返回的更具体了)</td>
+</tr>
+<tr>
+<td>异常</td>
+<td>可不同</td>
+<td>⼦类⽅法声明抛出的异常类应⽐⽗类⽅法声明抛出的异常类更⼩或相等(父类异常范围大于等于子类)</td>
+</tr>
+<tr>
+<td>访问修饰符</td>
+<td>可不同</td>
+<td>⼦类⽅法的访问权限应⽐⽗类⽅法的访问权限更⼤或相等</td>
+</tr>
+<tr>
+<td>发⽣阶段</td>
+<td>编译期</td>
+<td>运⾏期</td>
+</tr>
+</tbody></table>
+<h1 id="Java-⾯向对象编程三⼤特性-封装-继承-多态"><a href="#Java-⾯向对象编程三⼤特性-封装-继承-多态" class="headerlink" title="Java ⾯向对象编程三⼤特性: 封装 继承 多态"></a>Java ⾯向对象编程三⼤特性: 封装 继承 多态</h1><p>封装把⼀个对象的属性私有化，同时提供⼀些可以被外界访问的属性的⽅法。</p>
+<p>继承是使⽤已存在的类的定义作为基础建⽴新类的技术，新类的定义可以增加新的数据或新的功 能，也可以⽤⽗类的功能，但不能选择性地继承⽗类。通过使⽤继承我们能够⾮常⽅便地复⽤以 前的代码。<br>关于继承如下 3 点请记住： </p>
+<ol>
+<li>⼦类拥有⽗类对象所有的属性和⽅法（包括私有属性和私有⽅法），但是⽗类中的私有属性 和⽅法⼦类是⽆法访问，只是拥有。 </li>
+<li>⼦类可以拥有⾃⼰属性和⽅法，即⼦类可以对⽗类进⾏扩展。 </li>
+<li>⼦类可以⽤⾃⼰的⽅式实现⽗类的⽅法。</li>
+</ol>
+<p>所谓多态就是指程序中定义的引⽤变量所指向的具体类型和通过该引⽤变量发出的⽅法调⽤在编 程时并不确定，⽽是在程序运⾏期间才确定，即⼀个引⽤变量到底会指向哪个类的实例对象，该 引⽤变量发出的⽅法调⽤到底是哪个类中实现的⽅法，必须在由程序运⾏期间才能决定。 在 Java 中有两种形式可以实现多态：继承（多个⼦类对同⼀⽅法的重写）和接⼝（实现接⼝并 覆盖接⼝中同⼀⽅法）</p>
+<h1 id="String-StringBuffer-和-StringBuilder-的区别是什么-String-为什么是不可变的"><a href="#String-StringBuffer-和-StringBuilder-的区别是什么-String-为什么是不可变的" class="headerlink" title="String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?"></a>String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?</h1><p>String 类中使⽤ final 关键字修饰字符数组来保存字符串， private final char value[] ，所以 String 对象是不可变的</p>
+<p>⽽ StringBuilder 与 StringBuffer 都继承⾃ AbstractStringBuilder 类，在 AbstractStringBuilder 中 也是使⽤字符数组保存字符串 char[]value 但是没有⽤ final 关键字修饰，所以这两种对象都是可 变的</p>
+<p><strong>线程安全性</strong>  String 中的对象是不可变的，也就可以理解为常量，线程安全。AbstractStringBuilder 是 StringBuilder 与 StringBuffer 的公共⽗类，定义了⼀些字符串的基本操作，如 expandCapacity、 append、insert、indexOf 等公共⽅法。StringBuffer 对⽅法加了同步锁或者对调⽤的⽅法加了同 步锁，所以是线程安全的。StringBuilder 并没有对⽅法进⾏加同步锁，所以是⾮线程安全的。</p>
+<p><strong>性能</strong> 每次对 String 类型进⾏改变的时候，都会⽣成⼀个新的 String 对象，然后将指针指向新的 String 对象。StringBuffer 每次都会对 StringBuffer 对象本身进⾏操作，⽽不是⽣成新的对象并改变对象 引⽤。相同情况下使⽤ StringBuilder 相⽐使⽤ StringBuffer 仅能获得 10%~15% 左右的性能提 升，但却要冒多线程不安全的⻛险。</p>
+<h1 id="⾃动装箱与拆箱"><a href="#⾃动装箱与拆箱" class="headerlink" title="⾃动装箱与拆箱"></a>⾃动装箱与拆箱</h1><p>装箱：将基本类型⽤它们对应的引⽤类型包装起来； </p>
+<p>拆箱：将包装类型转换为基本数据类型；</p>
+<h1 id="在⼀个静态⽅法内调⽤⼀个⾮静态成员为什么是⾮法的"><a href="#在⼀个静态⽅法内调⽤⼀个⾮静态成员为什么是⾮法的" class="headerlink" title="在⼀个静态⽅法内调⽤⼀个⾮静态成员为什么是⾮法的"></a>在⼀个静态⽅法内调⽤⼀个⾮静态成员为什么是⾮法的</h1><p>由于静态⽅法可以不通过对象进⾏调⽤，因此在静态⽅法⾥，不能调⽤其他⾮静态变量，也不可 以访问⾮静态变量成员。</p>
+<h1 id="在-Java-中定义⼀个不做事且没有参数的构造⽅法的作⽤"><a href="#在-Java-中定义⼀个不做事且没有参数的构造⽅法的作⽤" class="headerlink" title="在 Java 中定义⼀个不做事且没有参数的构造⽅法的作⽤"></a>在 Java 中定义⼀个不做事且没有参数的构造⽅法的作⽤</h1><p>Java 程序在执⾏⼦类的构造⽅法之前，如果没有⽤ super() 来调⽤⽗类特定的构造⽅法，则会调 ⽤⽗类中“没有参数的构造⽅法”。因此，如果⽗类中只定义了有参数的构造⽅法，⽽在⼦类的构 造⽅法中⼜没有⽤ super() 来调⽤⽗类中特定的构造⽅法，则编译时将发⽣错误，因为 Java 程 序在⽗类中找不到没有参数的构造⽅法可供执⾏。解决办法是在⽗类⾥加上⼀个不做事且没有参 数的构造⽅法</p>
+<h1 id="接⼝和抽象类的区别"><a href="#接⼝和抽象类的区别" class="headerlink" title="接⼝和抽象类的区别"></a>接⼝和抽象类的区别</h1><p>接⼝⽅法可以有默认 实现，抽象类可以有⾮抽象的⽅法。</p>
+<p>接⼝中除了 static 、 final 变量，不能有其他变量，⽽抽象类中则不⼀定。</p>
+<p>⼀个类可以实现多个接⼝，但只能实现⼀个抽象类。接⼝⾃⼰本身可以通过 extends 关键 字扩展多个接⼝。 </p>
+<p>接⼝⽅法默认修饰符是 public ，抽象⽅法可以有 public 、 protected 和 default 这些修饰 符（抽象⽅法就是为了被重写所以不能使⽤ private 关键字修饰！）。 </p>
+<p>从设计层⾯来说，抽象是对类的抽象，是⼀种模板设计，⽽接⼝是对⾏为的抽象，是⼀种⾏为的规范。</p>
+<h1 id="成员变量与局部变量的区别有哪些"><a href="#成员变量与局部变量的区别有哪些" class="headerlink" title="成员变量与局部变量的区别有哪些"></a>成员变量与局部变量的区别有哪些</h1><p>从语法形式上看:成员变量是属于类的，⽽局部变量是在⽅法中定义的变量或是⽅法的参数； 成员变量可以被 public , private , static 等修饰符所修饰，⽽局部变量不能被访问控制修饰 符及 static 所修饰；但是，成员变量和局部变量都能被 final 所修饰。</p>
+<p>从变量在内存中的存储⽅式来看:如果成员变量是使⽤ static 修饰的，那么这个成员变量是属 于类的，如果没有使⽤ static 修饰，这个成员变量是属于实例的。对象存于堆内存，如果局 部变量类型为基本数据类型，那么存储在栈内存，如果为引⽤数据类型，那存放的是指向堆 内存对象的引⽤或者是指向常量池中的地址。 3. 从变量在内存中的⽣存时间上看:成员变量是对象的⼀部分，它随着对象的创建⽽存在，⽽局 部变量随着⽅法的调⽤⽽⾃动消失。 4. 成员变量如果没有被赋初值:则会⾃动以类型的默认值⽽赋值（⼀种情况例外:被 final 修饰 的成员变量也必须显式地赋值），⽽局部变量则不会⾃动赋值</p>
+]]></content>
       <tags>
         <tag>Java</tag>
       </tags>
@@ -41,6 +118,457 @@
 ]]></content>
       <tags>
         <tag>面试</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Git</title>
+    <url>/2021/09/28/Git/</url>
+    <content><![CDATA[<h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">//设置用户名和邮箱</span><br><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br><span class="line">//检查</span><br><span class="line">$ git config user.name</span><br><span class="line">$ git config user.email</span><br></pre></td></tr></table></figure>
+
+<h5 id="远程仓库配置步骤"><a href="#远程仓库配置步骤" class="headerlink" title="远程仓库配置步骤"></a>远程仓库配置步骤</h5><p>1.创建SSH Key<br><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code><br>用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人<br>2登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容</p>
+<h5 id="本地仓库和远程仓库关联"><a href="#本地仓库和远程仓库关联" class="headerlink" title="本地仓库和远程仓库关联"></a>本地仓库和远程仓库关联</h5><p>1.new repository取好Repository name,</p>
+<p>Initialize this repository with:</p>
+<p>Skip this step if you’re importing an existing repository.</p>
+<p>(是否需要加readme，用于从零开始开发，如果导入一个本地已存在的仓库，跳过此步骤)</p>
+<p>后create repository</p>
+<p>2.在本地仓库下运行命令：</p>
+<p><code>$ git remote add origin git@github.com:tanbinzhi/&lt;Repository name&gt;.git</code></p>
+<p>把<code>tanbinzhi</code>替换成自己的GitHub账户名</p>
+<p><code>origin</code>是远程库的名字</p>
+<h4 id="本地仓库-gt-远程仓库"><a href="#本地仓库-gt-远程仓库" class="headerlink" title="本地仓库-&gt;远程仓库"></a>本地仓库-&gt;远程仓库</h4><p><code>$ git push -u origin master</code></p>
+<p>由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送到远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<p><code>$ git push origin master</code></p>
+<p>把本地<code>master</code>分支的最新修改推送至远程仓库的<code>master</code>分支的简写</p>
+<p><code>$ git remote -v</code></p>
+<p>查看远程库信息</p>
+<p><code>$ git remote rm &lt;name&gt;</code></p>
+<p>解除本地和远程的绑定关系</p>
+<h4 id="远程仓库-gt-本地仓库"><a href="#远程仓库-gt-本地仓库" class="headerlink" title="远程仓库-&gt;本地仓库"></a>远程仓库-&gt;本地仓库</h4><p><code>$ git clone git@github.com:tanbinzhi/&lt;Repository name&gt;.git</code></p>
+<h4 id="修复bug"><a href="#修复bug" class="headerlink" title="修复bug"></a>修复bug</h4><p><code>$ git stash</code></p>
+<p>把当前工作现场“储藏”起来，等以后恢复现场后继续工作</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">假定需要在`master`分支上修复，就从`master`创建临时分支</span><br><span class="line">$ git checkout master</span><br><span class="line">$ git checkout -b issue-101</span><br><span class="line">$ git add readme.txt </span><br><span class="line">$ git commit -m &quot;fix bug 101&quot;</span><br><span class="line">[issue-101 4c805e2] fix bug 101</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line">$ git switch master</span><br><span class="line">$ git merge --no-ff -m &quot;merged bug fix 101&quot; issue-101</span><br><span class="line">接着回到dev分支干活</span><br><span class="line">$ git switch dev</span><br><span class="line">$ git stash pop     恢复工作现场的同时把stash内容也删了</span><br></pre></td></tr></table></figure>
+
+<p><code>$ git stash list</code></p>
+<p>查看stash内容</p>
+<p><code>$ git stash apply stash@&#123;0&#125;</code></p>
+<p>恢复指定的stash</p>
+<p><code>$ git cherry-pick 4c805e2</code></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">$ git cherry-pick 4c805e2</span><br><span class="line">[master 1d4b803] fix bug 101</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+
+<p><code>4c805e2</code>是在bug <code>$ git commit</code>时出现的，在master分支上修复的bug，想要合并到当前dev分支，可以用<code>git cherry-pick &lt;commit&gt;</code>命令，把bug提交的修改“复制”到当前分支，避免重复劳动。</p>
+<h4 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h4><p><code>$ git init</code></p>
+<p>初始化一个Git仓库</p>
+<p><code>$ git add readme.txt</code></p>
+<p>把文件(例子为readme.txt)添加到仓库,可反复多次使用，添加多个文件</p>
+<p>实际上就是把文件修改添加到暂存区</p>
+<p><code>$ git commit -m &quot;wrote a readme file&quot;</code></p>
+<p>把文件提交到仓库,<code>-m</code>后面输入的是本次提交的说明,方便找到改动记录</p>
+<p>实际上就是把暂存区的所有内容提交到当前分支</p>
+<p><code>$ git checkout -b dev</code></p>
+<p>即<code>$ git branch dev</code>//创建dev分支       <code>$ git checkout dev</code>//切换到dev分支</p>
+<p><code>$ git checkout -b dev origin/dev</code></p>
+<p>在本地创建和远程分支对应的分支（包含了下面一条命令）</p>
+<p><code>$ git branch --set-upstream-to=origin/dev dev</code></p>
+<p>建立本地分支和远程分支的关联</p>
+<p><code>$ git pull</code></p>
+<p>把最新的提交从<code>origin/dev</code>抓下来(会自动合并，不需要再git merge)</p>
+<p><code>$ git merge (--no-ff -m &quot;merged bug fix 101&quot;) dev</code></p>
+<p>切换到master分支执行该命令的含义就是：把<code>dev</code>分支的工作成果合并到<code>master</code>分支上</p>
+<p>括号里的内容表示强制禁用<code>Fast forward</code>模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息，否则删除分支后，会丢掉分支信息</p>
+<p><code>$ git branch -d dev</code></p>
+<p>删除dev分支</p>
+<p><code>$ git branch</code></p>
+<p>列出所有分支，当前分支前面会标一个<code>*</code>号</p>
+<p><code>$ git status</code></p>
+<p>随时掌握工作区的状态</p>
+<p><code>$ git diff readme.txt </code></p>
+<p>当有文件（如readme.txt）被修改过，但是没有添加到git仓库，<code>git status</code>会告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容。</p>
+<p><code>$ git log --pretty=oneline</code></p>
+<p>结果类似：</p>
+<p><code>c16001c67a129172e0ea8ed83a09c1e4e4de7550 (HEAD -&gt; master) 修改了第一行 bd6c3e05285202f37c57149e041cca3ace303cb9 新增readme</code></p>
+<p>显示从最近到最远的提交日志,<code>--pretty=oneline</code>参数简化日志输出信息</p>
+<p>结果里面前面的数字表示版本号</p>
+<p><code>$ git reset --hard HEAD^</code></p>
+<p>回退到上一个版本</p>
+<p>在Git中，用<code>HEAD</code>表示当前版本,上一个版本是<code>HEAD^</code>，上上一个版本是<code>HEAD^^</code>，往上100个版本可以写成<code>HEAD~100</code></p>
+<p><code>$ git reset --hard c16001</code></p>
+<p>回退到版本号（如c16001….）指定版本，不需要写全</p>
+<p><code>$ git reflog</code></p>
+<p>查看命令历史</p>
+<p><code>$ git restore &lt;file&gt;</code></p>
+<p> to unstage(撤回暂存区)</p>
+<p><code>$  git restore --staged &lt;file&gt;</code></p>
+<p> to discard changes in working directory(撤回在工作目录的改变)</p>
+<figure class="highlight c"><table><tr><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git restore --staged &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line">        modified:   readme.txt</span><br><span class="line"></span><br><span class="line">Changes <span class="keyword">not</span> staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes in working directory)</span><br><span class="line">        modified:   readme.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>$ git remote -v</code></p>
+<p>查看远程库的信息</p>
+<p><code>git tag &lt;tagname&gt; (commit id)</code> </p>
+<p>新建一个标签，默认为<code>HEAD</code>，也可以指定一个commit id(git log 可以查看commit id)；</p>
+<ul>
+<li><p><code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以指定标签信息；</p>
+</li>
+<li><p><code>git tag</code>可以查看所有标签。</p>
+</li>
+<li><p><code>git show &lt;tagname&gt;</code>查看标签信息</p>
+</li>
+<li><p><code>git push origin &lt;tagname&gt;</code>推送一个本地标签；</p>
+</li>
+<li><p><code>git push origin --tags</code>推送全部未推送过的本地标签；</p>
+</li>
+<li><p><code>git tag -d &lt;tagname&gt;</code>删除一个本地标签；</p>
+</li>
+<li><p><code>git push origin :refs/tags/&lt;tagname&gt;</code>删除一个远程标签。</p>
+</li>
+</ul>
+<h4 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h4><p>点“Fork”就在自己的账号下克隆了一个xxx(repo name)仓库，然后，从自己的账号下clone：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">git clone git@github.com:tanbinzhi/&lt;repo name&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>一定要从自己的账号下clone仓库，这样你才能推送修改。如果从xxx的作者的仓库地址如bootstrap项目<code>git@github.com:twbs/bootstrap.git</code>克隆，因为没有权限，你将不能推送修改。</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JVM</title>
+    <url>/2021/09/27/JVM/</url>
+    <content><![CDATA[<h4 id="双亲委派"><a href="#双亲委派" class="headerlink" title="双亲委派"></a>双亲委派</h4><h4 id="介绍下-Java-内存区域-运⾏时数据区"><a href="#介绍下-Java-内存区域-运⾏时数据区" class="headerlink" title="介绍下 Java 内存区域(运⾏时数据区)"></a>介绍下 Java 内存区域(运⾏时数据区)</h4><p>1.8之前</p>
+<p><img src="https://s3.bmp.ovh/imgs/2021/09/f4ae82191a867015.png"><br>1.8<br><img src="https://s3.bmp.ovh/imgs/2021/09/1bcb04536cfc9e09.png"></p>
+<p>线程私有： </p>
+<ul>
+<li>程序计数器 </li>
+<li>虚拟机栈 </li>
+<li>本地⽅法栈 </li>
+</ul>
+<p>线程共享： </p>
+<ul>
+<li>堆 </li>
+<li>⽅法区 </li>
+<li>直接内存</li>
+</ul>
+<h5 id="程序计数器"><a href="#程序计数器" class="headerlink" title="程序计数器"></a>程序计数器</h5><p>通过改变计数器的值来选取下⼀条需要执⾏的字节码指令</p>
+<p>为了线程切换后能恢复到正确的执⾏位置，每条线程都需要有⼀个独⽴的程序计数器</p>
+<h5 id="Java虚拟机栈"><a href="#Java虚拟机栈" class="headerlink" title="Java虚拟机栈"></a>Java虚拟机栈</h5><p><strong>堆、栈、方法区的交互关系</strong></p>
+<p><img src="https://gitee.com/ShaoxiongDu/imageBed/raw/master/image-20210626114521515.png" alt="image-20210626114521515"></p>
+<p>Java 虚拟机栈由栈帧组成，栈帧里面有局部变量表，局部变量表可以存放基本类型的变量以及引用变量</p>
+<p>StackOverFlowError ：当线程请求栈的深度超过当前 Java 虚拟机栈的最⼤深度时，就抛出 StackOverFlowError 错误。 </p>
+<p>OutOfMemoryError ： 如果 Java 虚拟机堆中没有空闲内存，并且垃圾回收器也⽆法提供更多的内存。就会抛出 OutOfMemoryError 错误。</p>
+<p><strong>那么⽅法/函数如何调⽤</strong></p>
+<p>每⼀次函数调⽤都会有⼀个 对应的栈帧被压⼊ Java 栈，每⼀个函数调⽤结束后，都会有⼀个栈帧被弹出。</p>
+<p>Java ⽅法有两种返回⽅式： 1. return 语句。 2. 抛出异常。</p>
+<p>不管哪种返回⽅式都会导致栈帧被弹出。</p>
+<h5 id="本地⽅法栈"><a href="#本地⽅法栈" class="headerlink" title="本地⽅法栈"></a>本地⽅法栈</h5><p>本地⽅法栈为虚拟机使⽤到的 Native ⽅法服务</p>
+<h5 id="堆"><a href="#堆" class="headerlink" title="堆"></a>堆</h5><p>在虚拟机启动时创建</p>
+<p>存放对象实例</p>
+<p>JDK 8 ⽅法区变成元空间，元空间使⽤直接内存。</p>
+<p><img src="https://s3.bmp.ovh/imgs/2021/09/70274a250253e9d5.png"></p>
+<p>⼤部分情况，对象都会⾸先在 Eden 区域分配，在⼀次新⽣代垃圾回收后，如果对象还存活，则会进⼊ s0 或者 s1，并且对象的年龄还会加 1(Eden 区-&gt;Survivor 区后对象的初始年龄变为 1)， 当它的年龄增加到⼀定程度（默认为 15 岁），就会被晋升到⽼年代中。对象晋升到⽼年代的年 龄阈值，可以通过参数 -XX:MaxTenuringThreshold 来设置。</p>
+<p>当累积的某个年龄⼤⼩超过了survivor区的⼀半时，取这个年龄和 MaxTenuringThreshold中更⼩的⼀个值，作为新的晋升年龄阈值</p>
+<p><strong>堆里的OOM</strong></p>
+<ol>
+<li>OutOfMemoryError: GC Overhead Limit Exceeded ： 当JVM花太多时间执⾏垃圾回收并且 只能回收很少的堆空间时，就会发⽣此错误。（ 这意味着我们的应用程序几乎耗尽了所有可用内存，垃圾收集器花了太长时间试图清理它，并多次失败）</li>
+<li> java.lang.OutOfMemoryError: Java heap space :假如在创建新的对象时, 堆内存中的空间不⾜ 以存放新创建的对象, 就会引发 java.lang.OutOfMemoryError: Java heap space 错误。(和本机物 理内存⽆关，和配置的内存⼤⼩有关！)</li>
+</ol>
+<h5 id="⽅法区"><a href="#⽅法区" class="headerlink" title="⽅法区"></a>⽅法区</h5><figure class="highlight java"><table><tr><td class="code"><pre><span class="line">-XX:MetaspaceSize=N <span class="comment">//设置 Metaspace 的初始（和最⼩⼤⼩）</span></span><br><span class="line">-XX:MaxMetaspaceSize=N <span class="comment">//设置 Metaspace 的最⼤⼤⼩</span></span><br></pre></td></tr></table></figure>
+
+<p>元空间溢出时会得到如下错误： java.lang.OutOfMemoryError: MetaSpace</p>
+<h5 id="运⾏时常量池"><a href="#运⾏时常量池" class="headerlink" title="运⾏时常量池"></a>运⾏时常量池</h5><p>JDK1.8 hotspot移除了永久代⽤元空间(Metaspace)取⽽代之, 这时候字符串常量池还 在堆, 运⾏时常量池还在⽅法区, 只不过⽅法区的实现从永久代变成了元空间</p>
+<h5 id="直接内存"><a href="#直接内存" class="headerlink" title="直接内存"></a>直接内存</h5><h4 id="Java对象的创建过程"><a href="#Java对象的创建过程" class="headerlink" title="Java对象的创建过程"></a>Java对象的创建过程</h4><p><strong>类加载</strong></p>
+<ul>
+<li><p>加载 </p>
+<p>加载器：应用程序类加载器，扩展类加载器，启动类加载器</p>
+<p>双亲委派：当一个类收到了类加载请求，他首先不会尝试自己去加载这个类，而是把这个请求委派给父类去完成；父类加载器无法加载这个类，再交给子类加载器去加载。</p>
+</li>
+<li><p>链接</p>
+<ul>
+<li><p>验证 保证被加载类的正确性</p>
+</li>
+<li><p>准备 为类变量分配内存并设置默认值，final修饰的类变量在编译阶段已经分配内存，这个阶段会为该变量初始化</p>
+</li>
+<li><p>解析</p>
+</li>
+</ul>
+</li>
+<li><p>初始化 类变量进行初始化；开始创建对象，确定对象所需的内存大小</p>
+</li>
+</ul>
+<p><strong>分配内存</strong></p>
+<p>JVM在Java堆中为对象分配内存，</p>
+<p>分配内存的方式有指针碰撞和空闲列表</p>
+<p>指针碰撞：首先在用过的内存和没有用过的内存之间有一个指针，指针碰撞的方式就是把该指针往没用过的内存方向移动对象内存大小的位置，在标记压缩和复制的垃圾回收算法中用到</p>
+<p>空闲列表：JVM划分一块足够的空闲内存给对象，如果是标记清除的回收方式会用到</p>
+<p><strong>初始化为默认值</strong></p>
+<p><strong>设置对象头</strong></p>
+<p>例如这个对象是哪个类的实例、对象的哈希码、对象的 GC 分代年龄等信息。这些信息存放在对象头 中。</p>
+<p><strong>执⾏程序员编写的初始化⽅法</strong></p>
+<h4 id="“”和new"><a href="#“”和new" class="headerlink" title="“”和new"></a>“”和new</h4><p>总之，创建字符串有两种方式：两种内存区域(pool,heap)<br>1.””创建的字符串在字符串池中。<br>2.new 创建字符串时，首先查看池中是否有相同的字符串，如果有则拷贝一份放到堆中，然后返回堆中的地址；如果池中没有则在堆中创建一份，然后返回堆中的地址，<br>3.在对字符串赋值时，如果右操作数含有一个或一个以上的字符串引用时，则在堆中再建立一个字符串对象，返回引用。如：String s= str1+”blog”;</p>
+<h4 id="如何判断对象是否死亡"><a href="#如何判断对象是否死亡" class="headerlink" title="如何判断对象是否死亡"></a>如何判断对象是否死亡</h4><ul>
+<li><p>引⽤计数法 有别的地方引用这个对象，计算器加1，引用失效计算器减1，不能解决循环引用的问题</p>
+</li>
+<li><p><strong>可达性分析算法</strong></p>
+<p>通过一系列GcRoot作为起点，从这些节点向下搜索，当一个对象没有被GcRoot引用，表名该对象已死亡</p>
+<p><strong>GcRoot的种类</strong></p>
+<p>1.虚拟机栈：栈帧中的本地变量表引用的对象</p>
+<p>2.native方法引用的对象</p>
+<p>3.方法区中的静态变量和常量引用的对象</p>
+</li>
+</ul>
+<h4 id="垃圾收集有哪些算法，各⾃的特点？"><a href="#垃圾收集有哪些算法，各⾃的特点？" class="headerlink" title="垃圾收集有哪些算法，各⾃的特点？"></a>垃圾收集有哪些算法，各⾃的特点？</h4><p>基本的</p>
+<ul>
+<li>标记-清除算法</li>
+<li>复制算法</li>
+<li>标记-压缩算法</li>
+</ul>
+<p>实现上</p>
+<p>分代收集算法：新生代由于有大量对象死亡，选择复制算法，老年代对象存活几率高，复制算法复制成本大，一般用标记-压缩算法</p>
+<h4 id="垃圾收集的并行和并发"><a href="#垃圾收集的并行和并发" class="headerlink" title="垃圾收集的并行和并发"></a>垃圾收集的并行和并发</h4><p>并⾏（Parallel） ：指多条垃圾收集线程并⾏⼯作，但此时⽤户线程仍然处于等待状态。 并发（Concurrent）：指⽤户线程与垃圾收集线程同时执⾏（但不⼀定是并⾏，可能会交 替执⾏），⽤户程序在继续运⾏，⽽垃圾收集器运⾏在另⼀个 CPU 上</p>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java集合</title>
+    <url>/2021/09/25/Java%E9%9B%86%E5%90%88/</url>
+    <content><![CDATA[<h4 id="List-Set-Map"><a href="#List-Set-Map" class="headerlink" title="List/Set/Map"></a>List/Set/Map</h4><ul>
+<li>List:存储的元素是有序的、可重复的</li>
+<li>Set:存储的元素是无序的、不可重复的</li>
+<li>Map:使用键值对存储，key无序不可重复，value无序可重复</li>
+</ul>
+<h4 id="Arraylist-与-LinkedList-区别"><a href="#Arraylist-与-LinkedList-区别" class="headerlink" title="Arraylist 与 LinkedList 区别"></a>Arraylist 与 LinkedList 区别</h4><ul>
+<li>ArrayList底层是数组；LinkedList底层是双向链表</li>
+<li><strong>时间角度，增删</strong>ArrayList插入和删除元素的时间复杂度受元素位置影响；LinkedList插入和删除元素时间复杂度与元素位置无关</li>
+<li><strong>时间角度，查</strong>ArrayList支持通过索引快速访问，LinkedList不支持</li>
+<li><strong>空间角度</strong>ArrayList内存空间浪费在数组结尾会预留一定的空间，LinkedList内存空间花费在每一个节点比较多，因为每一个节点除了存放该节点的数据还要存放前驱和后继的引用</li>
+</ul>
+<h4 id="ArrayList-的扩容机制"><a href="#ArrayList-的扩容机制" class="headerlink" title="ArrayList 的扩容机制"></a>ArrayList 的扩容机制</h4><p>无参构造函数创建ArrayList，实际上会创建一个空数组，在增加第一个元素时，会将容量扩容为10</p>
+<p>当增加元素后元素数量大于数组长度时，扩容</p>
+<p>扩容会将容量扩大到原来的1.5倍左右</p>
+<h4 id="HashMap的底层实现"><a href="#HashMap的底层实现" class="headerlink" title="HashMap的底层实现"></a>HashMap的底层实现</h4><p>HashMap通过key计算hashcode，来判断当前元素存放的位置，如果当前位置存在元素，判断hashcode和key是否相同，如果相同就覆盖，如果不同加到链表中；</p>
+<p>当链表长度大于8，如果数组长度小于64，进行数组扩容，如果数组长度不小于64，将链表转为红黑树。</p>
+<h4 id="为什么使用红黑树"><a href="#为什么使用红黑树" class="headerlink" title="为什么使用红黑树"></a>为什么使用红黑树</h4><p>红黑树解决了二叉查找树在某些情况下会退化成线性结构的问题</p>
+<h4 id="HashMap初始容量和扩容"><a href="#HashMap初始容量和扩容" class="headerlink" title="HashMap初始容量和扩容"></a>HashMap初始容量和扩容</h4><p> ① 创建时如果不指定容量初始值，  HashMap 默认的初始化⼤⼩为 16。之后每次扩充，容量变为原来的 2 倍</p>
+<p>② 创建时如果给定了容量初始值，HashMap 会将其扩充为 2 的幂次⽅⼤⼩ </p>
+<h4 id="HashMap的长度为什么是2的幂次方"><a href="#HashMap的长度为什么是2的幂次方" class="headerlink" title="HashMap的长度为什么是2的幂次方"></a>HashMap的长度为什么是2的幂次方</h4><p>通过hashcode来计算在数组的存放位置，可以通过%取余实现，但是<strong>取余(%)操作中如果除数是2 的幂次则等价于与其除数减⼀的与(&amp;)操作。并且采⽤⼆进制位操作 &amp;，相对于%能够提⾼运算效率</strong></p>
+<p><strong>所以HashMap 的⻓度是2的幂次⽅是为了提高通过hashcode判断存放位置的运算效率</strong></p>
+<h4 id="HashMap-和-ConcurrentHashMap-的区别"><a href="#HashMap-和-ConcurrentHashMap-的区别" class="headerlink" title="HashMap 和 ConcurrentHashMap 的区别"></a>HashMap 和 ConcurrentHashMap 的区别</h4><p><strong>底层数据结构</strong>：都是数组+链表/红⿊⼆叉树，当链表⻓度⼤于8，如果数组的⻓度⼩于 64，会选择进⾏数组扩容，否则，将链表(O(N))转化为红⿊树(O(logN))，以减少搜索时间。</p>
+<p><strong>线程是否安全</strong>： HashMap 是⾮线程安全的；ConcurrentHashMap是线程安全的，并发控制使⽤ synchronized 和 CAS 来操作</p>
+<p><strong>对 Null key 和 Null value 的⽀持</strong>： HashMap 可以存储 null 的 key 和 value；ConcurrentHashMap 不允许有 null 键和 null 值，否则会抛出 NullPointerException 。 </p>
+<h4 id="HashMap-和-HashSet区别"><a href="#HashMap-和-HashSet区别" class="headerlink" title="HashMap 和 HashSet区别"></a>HashMap 和 HashSet区别</h4><ul>
+<li>HashMap实现Map接口，HashSet实现Set接口</li>
+<li>HashMap存储键值对，HashSet存储对象</li>
+<li>HashMap调用put()添加元素，HashSet调用add()添加元素</li>
+<li>HashMap 使⽤键计算 hashcode，HashSet 使⽤对象计算 hashcode</li>
+</ul>
+<h4 id="HashSet如何检查重复"><a href="#HashSet如何检查重复" class="headerlink" title="HashSet如何检查重复"></a>HashSet如何检查重复</h4><p>把对象加⼊ HashSet 时，HashSet 会与其他对象的 hashcode 值作⽐较：</p>
+<p>如果 hashcode不同 ， 则没有重复，加入成功。</p>
+<p>如果hashcode 相同，会调⽤ equals() ⽅法来检查对象是否相同。如果相同， 出现重复，加入失败。否则加入成功</p>
+<h4 id="ConcurrentHashMap线程安全的具体实现⽅式-底层具体实现"><a href="#ConcurrentHashMap线程安全的具体实现⽅式-底层具体实现" class="headerlink" title="ConcurrentHashMap线程安全的具体实现⽅式/底层具体实现"></a>ConcurrentHashMap线程安全的具体实现⽅式/底层具体实现</h4><p>数据结构跟 HashMap的结构类似，数组+链表/红⿊⼆叉树。采⽤ CAS 和 synchronized 来保证并发安全</p>
+<p>synchronized 只锁定当前链表或红⿊⼆叉树的⾸节点，这样只要 hashcode 不冲突，就不会产⽣同步，效率提升</p>
+<h4 id="⽐较-HashSet、LinkedHashSet-和-TreeSet-三者的异同"><a href="#⽐较-HashSet、LinkedHashSet-和-TreeSet-三者的异同" class="headerlink" title="⽐较 HashSet、LinkedHashSet 和 TreeSet 三者的异同"></a>⽐较 HashSet、LinkedHashSet 和 TreeSet 三者的异同</h4><ul>
+<li>HashSet 的底层是 HashMap ，线程不安全，可以存 储 null 值</li>
+<li>LinkedHashSet 是 HashSet 的⼦类，迭代顺序即插入顺序</li>
+<li>TreeSet 底层使⽤红⿊树，对插入元素会进行排序，排序的⽅式有⾃然排序和自定义排序</li>
+</ul>
+<h4 id="集合框架底层数据结构总结"><a href="#集合框架底层数据结构总结" class="headerlink" title="集合框架底层数据结构总结"></a>集合框架底层数据结构总结</h4><p><strong>Collection</strong></p>
+<ul>
+<li><p>List </p>
+<ul>
+<li><p>Arraylist ： Object[] 数组 </p>
+</li>
+<li><p>LinkedList ： 双向链表</p>
+</li>
+</ul>
+</li>
+<li><p>Set </p>
+<ul>
+<li>HashSet （⽆序，唯⼀）: 基于 HashMap 实现的，底层采⽤ HashMap 来保存元素 </li>
+<li>LinkedHashSet ： LinkedHashSet 是 HashSet 的⼦类，并且其内部是通过LinkedHashMap 来实现的。</li>
+<li>TreeSet （有序，唯⼀）： 红⿊树(⾃平衡的排序⼆叉树)</li>
+</ul>
+</li>
+<li><p><strong>Map</strong></p>
+<ul>
+<li><p>HashMap ： 数组+链表/红黑树组成，当链表⻓度⼤于 8，如果当前数组的⻓度⼩于 64，进⾏数组扩容，否则，将链表转化为红⿊树</p>
+<p><img src="https://blog-pictures.oss-cn-shanghai.aliyuncs.com/15166327271293.jpg" alt="img"></p>
+</li>
+<li><p>LinkedHashMap ： LinkedHashMap 继承⾃ HashMap ，底层仍然是hash结构即数组+链表/红⿊树。LinkedHashMap 在HashMap的基础上，通过维护一条双向链表，解决了 HashMap 不能保证遍历顺序和插入顺序一致的问题</p>
+<p><img src="https://blog-pictures.oss-cn-shanghai.aliyuncs.com/15166338955699.jpg" alt="img"></p>
+</li>
+<li><p>TreeMap ： 红⿊树（⾃平衡的排序⼆叉树）</p>
+</li>
+</ul>
+</li>
+</ul>
+<h4 id="如何选⽤集合"><a href="#如何选⽤集合" class="headerlink" title="如何选⽤集合"></a>如何选⽤集合</h4><ul>
+<li><p><strong>如果我们需要根据键值获取到元素值就选⽤Map：</strong></p>
+<p>需要排序用 TreeMap ,不需要排序用HashMap ,需要保证线程安全⽤ ConcurrentHashMap 。 </p>
+</li>
+<li><p><strong>当我们只需要存放元素值时，就选List或Set：</strong></p>
+<p>需要保证元素唯⼀时选择TreeSet 或 HashSet ，</p>
+<p>不需要就选择ArrayList 或 LinkedList。</p>
+</li>
+</ul>
+<h4 id="copyonwrite"><a href="#copyonwrite" class="headerlink" title="copyonwrite"></a>copyonwrite</h4><ul>
+<li>Java利用copyonwrite的线程安全集合：CopyOnWriteArrayList，CopyOnWriteArraySet</li>
+<li>和ConcurrentHashMap一样都位于java.util.concurrent包下</li>
+<li>写时复制，适用于读操作远多于写操作的并发场景，写操作在一个副本上执行，不影响读操作的并发，写操作完毕后将原容器的引用指向新的容器。是一种读写分离的思想</li>
+</ul>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>操作系统</title>
+    <url>/2021/09/28/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</url>
+    <content><![CDATA[<h4 id="什么是操作系统"><a href="#什么是操作系统" class="headerlink" title="什么是操作系统"></a>什么是操作系统</h4><p>操作系统是管理计算机硬件和软件资源的程序</p>
+<h4 id="什么是系统调用"><a href="#什么是系统调用" class="headerlink" title="什么是系统调用"></a>什么是系统调用</h4><p>运行程序一般是在用户态下，</p>
+<p>但像内存管理、文件管理、设备管理、进程控制和进程通信这些都需要在系统态下进行，</p>
+<p>就需要通过操作系统进行系统调用</p>
+<h4 id="进程和线程的区别"><a href="#进程和线程的区别" class="headerlink" title="进程和线程的区别"></a>进程和线程的区别</h4><p>从JVM内存区域作答，</p>
+<p>此外各进程都是独立的</p>
+<h4 id="进程有哪⼏种状态"><a href="#进程有哪⼏种状态" class="headerlink" title="进程有哪⼏种状态"></a>进程有哪⼏种状态</h4><p>创建</p>
+<p>就绪</p>
+<p>运行</p>
+<p>阻塞</p>
+<p>结束</p>
+<h4 id="LRU⻚⾯置换算法（最近最久未使⽤⻚⾯置换算法）"><a href="#LRU⻚⾯置换算法（最近最久未使⽤⻚⾯置换算法）" class="headerlink" title="LRU⻚⾯置换算法（最近最久未使⽤⻚⾯置换算法）"></a>LRU⻚⾯置换算法（最近最久未使⽤⻚⾯置换算法）</h4><p>每个⻚⾯有⼀个字段记录⼀个⻚⾯⾃上次被访问以来所经历的时间 T，当需要淘汰⼀个⻚⾯时，选择所有⻚⾯中其 T 值最⼤的淘汰</p>
+]]></content>
+      <tags>
+        <tag>计算机基础</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Java多线程</title>
+    <url>/2021/09/26/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/</url>
+    <content><![CDATA[<h2 id="一、使用线程"><a href="#一、使用线程" class="headerlink" title="一、使用线程"></a>一、使用线程</h2><p>有三种使用线程的方法：</p>
+<ul>
+<li>实现 Runnable 接口；</li>
+<li>实现 Callable 接口；</li>
+<li>继承 Thread 类。</li>
+</ul>
+<h3 id="实现-Runnable-接口"><a href="#实现-Runnable-接口" class="headerlink" title="实现 Runnable 接口"></a>实现 Runnable 接口</h3><p>需要实现接口中的 run() 方法。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>使用 Runnable 实例再创建一个 Thread 实例，然后调用 Thread 实例的 start() 方法来启动线程。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    MyRunnable instance = <span class="keyword">new</span> MyRunnable();</span><br><span class="line">    Thread thread = <span class="keyword">new</span> Thread(instance);</span><br><span class="line">    thread.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="http-www-cyc2018-xyz-Java-Java-并发-html-实现-callable-接口-实现-Callable-接口"><a href="#http-www-cyc2018-xyz-Java-Java-并发-html-实现-callable-接口-实现-Callable-接口" class="headerlink" title="[#](http://www.cyc2018.xyz/Java/Java 并发.html#实现-callable-接口)实现 Callable 接口"></a>[#](<a href="http://www.cyc2018.xyz/Java/Java">http://www.cyc2018.xyz/Java/Java</a> 并发.html#实现-callable-接口)实现 Callable 接口</h3><p>与 Runnable 相比，Callable 可以有返回值，返回值通过 FutureTask 进行封装。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyCallable</span> <span class="keyword">implements</span> <span class="title">Callable</span>&lt;<span class="title">Integer</span>&gt; </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">call</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">123</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ExecutionException, InterruptedException </span>&#123;</span><br><span class="line">    MyCallable mc = <span class="keyword">new</span> MyCallable();</span><br><span class="line">    FutureTask&lt;Integer&gt; ft = <span class="keyword">new</span> FutureTask&lt;&gt;(mc);</span><br><span class="line">    Thread thread = <span class="keyword">new</span> Thread(ft);</span><br><span class="line">    thread.start();</span><br><span class="line">    System.out.println(ft.get());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="Daemon"><a href="#Daemon" class="headerlink" title="Daemon"></a>Daemon</h3><p>守护线程是程序运行时在后台提供服务的线程，不属于程序中不可或缺的部分。</p>
+<p>当所有非守护线程结束时，程序也就终止，同时会杀死所有守护线程。</p>
+<p>main() 属于非守护线程。</p>
+<p>在线程启动之前使用 setDaemon() 方法可以将一个线程设置为守护线程。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> MyRunnable());</span><br><span class="line">    thread.setDaemon(<span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="sleep"><a href="#sleep" class="headerlink" title="sleep()"></a>sleep()</h3><p>Thread.sleep(millisec) 方法会休眠当前正在执行的线程，millisec 单位为毫秒。</p>
+<p>sleep() 可能会抛出 InterruptedException，因为异常不能跨线程传播回 main() 中，因此必须在本地进行处理。线程中抛出的其它异常也同样需要在本地进行处理。</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Thread.sleep(<span class="number">3000</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <tags>
+        <tag>Java</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MySQL</title>
+    <url>/2021/09/26/MySQL/</url>
+    <content><![CDATA[<h4 id="什么是MySQL"><a href="#什么是MySQL" class="headerlink" title="什么是MySQL"></a>什么是MySQL</h4><p>MySQL 是⼀种关系型数据库，MySQL的默认端⼝号是3306，开源免费</p>
+<h4 id="存储引擎"><a href="#存储引擎" class="headerlink" title="存储引擎"></a>存储引擎</h4><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">show</span> engines;#查看MySQL提供的所有存储引擎</span><br></pre></td></tr></table></figure>
+
+<h4 id="MyISAM和InnoDB区别"><a href="#MyISAM和InnoDB区别" class="headerlink" title="MyISAM和InnoDB区别"></a>MyISAM和InnoDB区别</h4><p>⾏级锁 : MyISAM 只有表级锁，⽽InnoDB ⽀持⾏级锁和表级锁,默认为⾏级锁。</p>
+<p>事务： MyISAM不支持事务，但InnoDB⽀持事务。 </p>
+<p>崩溃后的安全恢复：InnoDB有崩溃修复能⼒</p>
+<p>外键： MyISAM不⽀持，InnoDB⽀持。 </p>
+<p>MVCC(多版本并发控制) ：InnoDB ⽀持MVCC。MVCC可以使⽤ 乐 观锁 和 悲观锁来实现</p>
+<h4 id="字符集及校对规则"><a href="#字符集及校对规则" class="headerlink" title="字符集及校对规则"></a>字符集及校对规则</h4><h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><p>B+树</p>
+<blockquote>
+<p><a href="https://zhuanlan.zhihu.com/p/54102723">漫画：什么是B+树？ - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<ul>
+<li>MyISAM，采用非聚集索引，即B+树叶子节点的data域存放的是数据记录的地址</li>
+<li>InnoDB，采用聚集索引，数据文件本身就是一个索引结构，索引的key是数据表的主键，索引的data保存了完整的数据记录，其余索引为辅助索引，data域是主键的值。<strong>所以主键不宜过长，并且建议自增</strong></li>
+</ul>
+<h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><ul>
+<li><p><strong>事务是逻辑上的⼀组操作，要么都执⾏，要么都不执⾏</strong></p>
+</li>
+<li><p>ACID</p>
+<ul>
+<li>原子性 undo log</li>
+<li>一致性</li>
+<li>隔离性 锁：for update排它锁；lock in share mode共享锁</li>
+<li>持久性 redo log</li>
+</ul>
+</li>
+</ul>
+<h4 id="并发事务带来哪些问题"><a href="#并发事务带来哪些问题" class="headerlink" title="并发事务带来哪些问题"></a>并发事务带来哪些问题</h4><ul>
+<li><p>脏读: a用户修改数据但未提交，b用户读到了a未提交的数据</p>
+</li>
+<li><p>不可重复读: a用户修改数据未提交，b用户读取不到a未提交的数据，此时脏读已解决；b用户不commit，表示b现在还是同一个事务，</p>
+<p>现在a用户提交修改的数据，b用户读取到了修改后的数据，可以发现b用户在同一个事务下读取的两次数据的结果不一样</p>
+</li>
+<li><p>幻读（Phantom read）: a和b都开启一个事务，a用户插入新值前，b用户查询数据，a插入数据并且提交，b再查询数据，此时b两次查询数据一样，不可重复读已解决；</p>
+<p>b继续插入数据和a新插入的数据的主键一样，会发现b插入不了该数据，并报错主键重复，这说明虽然b查询不到该数据，但实际上该数据已经存在</p>
+</li>
+</ul>
+<h4 id="事务隔离级别有哪些-MySQL的默认隔离级别是"><a href="#事务隔离级别有哪些-MySQL的默认隔离级别是" class="headerlink" title="事务隔离级别有哪些?MySQL的默认隔离级别是?"></a>事务隔离级别有哪些?MySQL的默认隔离级别是?</h4>]]></content>
+      <tags>
+        <tag>MySQL</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>拦截器</title>
+    <url>/2021/10/22/%E6%8B%A6%E6%88%AA%E5%99%A8/</url>
+    <content><![CDATA[<p>1、编写一个拦截器实现HandlerInterceptor接口</p>
+<p>2、拦截器注册到容器中(实现WebMvcConfigurer的addInterceptors)</p>
+<p>3、指定拦截规则【如果拦截所有（/**），静态资源也会被拦截】</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">LoginInterceptor</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 目标方法执行之前</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> request</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> response</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> handler</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@return</span></span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        HttpSession session = request.getSession();</span><br><span class="line"></span><br><span class="line">        Object loginUser = session.getAttribute(<span class="string">&quot;loginUser&quot;</span>);</span><br><span class="line">        <span class="keyword">if</span>(loginUser != <span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        request.setAttribute(<span class="string">&quot;msg&quot;</span>,<span class="string">&quot;请先登录&quot;</span>);</span><br><span class="line">        request.getRequestDispatcher(<span class="string">&quot;/&quot;</span>).forward(request,response);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 目标方法执行之后</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> request</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> response</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> handler</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> modelAndView</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        HandlerInterceptor.<span class="keyword">super</span>.postHandle(request, response, handler, modelAndView);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">/**</span></span><br><span class="line"><span class="comment">     * 页面渲染之后</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> request</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> response</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> handler</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@param</span> ex</span></span><br><span class="line"><span class="comment">     * <span class="doctag">@throws</span> Exception</span></span><br><span class="line"><span class="comment">     */</span></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterCompletion</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)</span> <span class="keyword">throws</span> Exception </span>&#123;</span><br><span class="line">        HandlerInterceptor.<span class="keyword">super</span>.afterCompletion(request, response, handler, ex);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@Configuration</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">AdminWebConfig</span> <span class="keyword">implements</span> <span class="title">WebMvcConfigurer</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">addInterceptors</span><span class="params">(InterceptorRegistry registry)</span> </span>&#123;</span><br><span class="line">        registry.addInterceptor(<span class="keyword">new</span> LoginInterceptor())</span><br><span class="line">                .addPathPatterns(<span class="string">&quot;/**&quot;</span>)</span><br><span class="line">                .excludePathPatterns(<span class="string">&quot;/&quot;</span>,<span class="string">&quot;login&quot;</span>,<span class="string">&quot;/css/**&quot;</span>,<span class="string">&quot;/fonts/**&quot;</span>,<span class="string">&quot;/images/**&quot;</span>,<span class="string">&quot;/js/**&quot;</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>spring</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>设计模式</title>
+    <url>/2021/09/28/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</url>
+    <content><![CDATA[<h4 id="单例"><a href="#单例" class="headerlink" title="单例"></a>单例</h4><p>实现方式：</p>
+<ol>
+<li>只有<code>private</code>构造方法，确保外部无法实例化；</li>
+<li>通过<code>private static</code>变量持有唯一实例，保证全局唯一性；</li>
+<li>通过<code>public static</code>方法返回此唯一实例，使外部调用方能获取到实例。</li>
+</ol>
+<h3 id="饿汉式"><a href="#饿汉式" class="headerlink" title="饿汉式"></a>饿汉式</h3><figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Singleton</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">static</span> Singleton instance = <span class="keyword">new</span> Singleton();  </span><br><span class="line">    <span class="function"><span class="keyword">private</span> <span class="title">Singleton</span> <span class="params">()</span></span>&#123;&#125;  </span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> Singleton <span class="title">getInstance</span><span class="params">()</span> </span>&#123;  </span><br><span class="line">    <span class="keyword">return</span> instance;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>懒加载   双重校验锁</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Singleton &#123;  </span><br><span class="line">    private volatile static Singleton singleton;  </span><br><span class="line">    private Singleton ()&#123;&#125;  </span><br><span class="line">    public static Singleton getSingleton() &#123;  </span><br><span class="line">    if (singleton == null) &#123;  </span><br><span class="line">        synchronized (Singleton.class) &#123;  </span><br><span class="line">        if (singleton == null) &#123;  </span><br><span class="line">            singleton = new Singleton();  </span><br><span class="line">        &#125;  </span><br><span class="line">        &#125;  </span><br><span class="line">    &#125;  </span><br><span class="line">    return singleton;  </span><br><span class="line">    &#125;  </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="适配器"><a href="#适配器" class="headerlink" title="适配器"></a>适配器</h4><p>我们已经有一个<code>Task</code>类，实现了<code>Callable</code>接口</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class Task implements Callable&lt;Long&gt; &#123;</span><br><span class="line">    private long num;</span><br><span class="line">    public Task(long num) &#123;</span><br><span class="line">        this.num = num;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    public Long call() throws Exception &#123;</span><br><span class="line">        long r = 0;</span><br><span class="line">        for (long n = 1; n &lt;= this.num; n++) &#123;</span><br><span class="line">            r = r + n;</span><br><span class="line">        &#125;</span><br><span class="line">        System.out.println(&quot;Result: &quot; + r);</span><br><span class="line">        return r;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>我们想通过一个线程去执行它：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Callable&lt;Long&gt; callable = new Task(123450000L);</span><br><span class="line">Thread thread = new Thread(callable); // compile error!</span><br><span class="line">thread.start();</span><br></pre></td></tr></table></figure>
+
+<p>发现编译不过！因为<code>Thread</code>接收<code>Runnable</code>接口，但不接收<code>Callable</code>接口</p>
+<p>用一个Adapter，把这个<code>Callable</code>接口“变成”<code>Runnable</code>接口，这样，就可以正常编译：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">Callable&lt;Long&gt; callable = new Task(123450000L);</span><br><span class="line">Thread thread = new Thread(new RunnableAdapter(callable));</span><br><span class="line">thread.start();</span><br></pre></td></tr></table></figure>
+
+<p>这个<code>RunnableAdapter</code>类就是Adapter</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">public class RunnableAdapter implements Runnable &#123;</span><br><span class="line">    // 引用待转换接口:</span><br><span class="line">    private Callable&lt;?&gt; callable;</span><br><span class="line"></span><br><span class="line">    public RunnableAdapter(Callable&lt;?&gt; callable) &#123;</span><br><span class="line">        this.callable = callable;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    // 实现指定接口:</span><br><span class="line">    public void run() &#123;</span><br><span class="line">        // 将指定接口调用委托给转换接口调用:</span><br><span class="line">        try &#123;</span><br><span class="line">            callable.call();</span><br><span class="line">        &#125; catch (Exception e) &#123;</span><br><span class="line">            throw new RuntimeException(e);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="代理（对比适配器）"><a href="#代理（对比适配器）" class="headerlink" title="代理（对比适配器）"></a>代理（对比适配器）</h4><p>代理模式通过封装一个已有接口，并向调用方返回相同的接口类型，能让调用方在不改变任何代码的前提下增强某些功能（例如，鉴权、延迟加载、连接池复用等）</p>
+<p>适配器（将A转为B）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> BAdapter implements B &#123;</span><br><span class="line">    <span class="keyword">private</span> A a;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">BAdapter</span><span class="params">(A a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.a = a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">b</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        a.a();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>代理（将A转为另一个A，新的A在原来的A增加了一些功能）</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="keyword">public</span> AProxy implements A &#123;</span><br><span class="line">    <span class="keyword">private</span> A a;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">AProxy</span><span class="params">(A a)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">this</span>.a = a;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">a</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span> (getCurrentUser().isRoot()) &#123;</span><br><span class="line">            <span class="keyword">this</span>.a.a();</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">throw</span> <span class="keyword">new</span> SecurityException(<span class="string">&quot;Forbidden&quot;</span>);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>计算机基础</tag>
       </tags>
   </entry>
 </search>

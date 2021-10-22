@@ -19,15 +19,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"tanbinzhi.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="加油！陌生人。">
+<meta name="description" content="Java 语⾔特点⾯向对象（封装，继承，多态） 平台⽆关性（ Java 虚拟机实现平台⽆关性） ⽀持多线程 ⽀持⽹络编程 编译与解释并存 JVM JDK 和 JREJava 虚拟机（JVM）是运⾏ Java 字节码的虚拟机。JVM 有针对不同系统的特定实现 （Windows，Linux，macOS），⽬的是使⽤相同的字节码，它们都会给出相同的结果。字节码 和不同系统的 JVM 实现是 Java 语">
 <meta property="og:type" content="article">
 <meta property="og:title" content="JavaSE">
 <meta property="og:url" content="http://tanbinzhi.github.io/2021/10/12/JavaSE/index.html">
 <meta property="og:site_name" content="彬智的个人博客">
-<meta property="og:description" content="加油！陌生人。">
+<meta property="og:description" content="Java 语⾔特点⾯向对象（封装，继承，多态） 平台⽆关性（ Java 虚拟机实现平台⽆关性） ⽀持多线程 ⽀持⽹络编程 编译与解释并存 JVM JDK 和 JREJava 虚拟机（JVM）是运⾏ Java 字节码的虚拟机。JVM 有针对不同系统的特定实现 （Windows，Linux，macOS），⽬的是使⽤相同的字节码，它们都会给出相同的结果。字节码 和不同系统的 JVM 实现是 Java 语">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-10-12T10:05:00.000Z">
-<meta property="article:modified_time" content="2021-10-12T10:05:30.374Z">
+<meta property="article:modified_time" content="2021-10-19T09:31:07.607Z">
 <meta property="article:author" content="tanbinzhi">
 <meta property="article:tag" content="Java">
 <meta name="twitter:card" content="summary">
@@ -132,7 +132,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-overview-active">
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -145,6 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-%E8%AF%AD%E2%BE%94%E7%89%B9%E7%82%B9"><span class="nav-number">1.</span> <span class="nav-text">Java 语⾔特点</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#JVM-JDK-%E5%92%8C-JRE"><span class="nav-number">2.</span> <span class="nav-text">JVM JDK 和 JRE</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E5%9E%8B%E5%B8%B8%E9%87%8F%E5%92%8C%E5%AD%97%E7%AC%A6%E4%B8%B2%E5%B8%B8%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">字符型常量和字符串常量的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9E%84%E9%80%A0%E5%99%A8-Constructor-%E6%98%AF%E5%90%A6%E5%8F%AF%E8%A2%AB-override"><span class="nav-number">4.</span> <span class="nav-text">构造器 Constructor 是否可被 override</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E9%87%8D%E8%BD%BD%E5%92%8C%E9%87%8D%E5%86%99%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">5.</span> <span class="nav-text">重载和重写的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Java-%E2%BE%AF%E5%90%91%E5%AF%B9%E8%B1%A1%E7%BC%96%E7%A8%8B%E4%B8%89%E2%BC%A4%E7%89%B9%E6%80%A7-%E5%B0%81%E8%A3%85-%E7%BB%A7%E6%89%BF-%E5%A4%9A%E6%80%81"><span class="nav-number">6.</span> <span class="nav-text">Java ⾯向对象编程三⼤特性: 封装 继承 多态</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#String-StringBuffer-%E5%92%8C-StringBuilder-%E7%9A%84%E5%8C%BA%E5%88%AB%E6%98%AF%E4%BB%80%E4%B9%88-String-%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E4%B8%8D%E5%8F%AF%E5%8F%98%E7%9A%84"><span class="nav-number">7.</span> <span class="nav-text">String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E2%BE%83%E5%8A%A8%E8%A3%85%E7%AE%B1%E4%B8%8E%E6%8B%86%E7%AE%B1"><span class="nav-number">8.</span> <span class="nav-text">⾃动装箱与拆箱</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8%E2%BC%80%E4%B8%AA%E9%9D%99%E6%80%81%E2%BD%85%E6%B3%95%E5%86%85%E8%B0%83%E2%BD%A4%E2%BC%80%E4%B8%AA%E2%BE%AE%E9%9D%99%E6%80%81%E6%88%90%E5%91%98%E4%B8%BA%E4%BB%80%E4%B9%88%E6%98%AF%E2%BE%AE%E6%B3%95%E7%9A%84"><span class="nav-number">9.</span> <span class="nav-text">在⼀个静态⽅法内调⽤⼀个⾮静态成员为什么是⾮法的</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%9C%A8-Java-%E4%B8%AD%E5%AE%9A%E4%B9%89%E2%BC%80%E4%B8%AA%E4%B8%8D%E5%81%9A%E4%BA%8B%E4%B8%94%E6%B2%A1%E6%9C%89%E5%8F%82%E6%95%B0%E7%9A%84%E6%9E%84%E9%80%A0%E2%BD%85%E6%B3%95%E7%9A%84%E4%BD%9C%E2%BD%A4"><span class="nav-number">10.</span> <span class="nav-text">在 Java 中定义⼀个不做事且没有参数的构造⽅法的作⽤</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%8E%A5%E2%BC%9D%E5%92%8C%E6%8A%BD%E8%B1%A1%E7%B1%BB%E7%9A%84%E5%8C%BA%E5%88%AB"><span class="nav-number">11.</span> <span class="nav-text">接⼝和抽象类的区别</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%88%90%E5%91%98%E5%8F%98%E9%87%8F%E4%B8%8E%E5%B1%80%E9%83%A8%E5%8F%98%E9%87%8F%E7%9A%84%E5%8C%BA%E5%88%AB%E6%9C%89%E5%93%AA%E4%BA%9B"><span class="nav-number">12.</span> <span class="nav-text">成员变量与局部变量的区别有哪些</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -159,13 +160,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">3</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-count">6</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -238,10 +239,16 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
-      
 
-      <time title="创建时间：2021-10-12 18:05:00 / 修改时间：18:05:30" itemprop="dateCreated datePublished" datetime="2021-10-12T18:05:00+08:00">2021-10-12</time>
+      <time title="创建时间：2021-10-12 18:05:00" itemprop="dateCreated datePublished" datetime="2021-10-12T18:05:00+08:00">2021-10-12</time>
     </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-10-19 17:31:07" itemprop="dateModified" datetime="2021-10-19T17:31:07+08:00">2021-10-19</time>
+      </span>
 
   
     <span id="/2021/10/12/JavaSE/" class="post-meta-item leancloud_visitors" data-flag-title="JavaSE" title="阅读次数">
@@ -276,7 +283,84 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        
+        <h1 id="Java-语⾔特点"><a href="#Java-语⾔特点" class="headerlink" title="Java 语⾔特点"></a>Java 语⾔特点</h1><p>⾯向对象（封装，继承，多态）</p>
+<p>平台⽆关性（ Java 虚拟机实现平台⽆关性）</p>
+<p>⽀持多线程</p>
+<p>⽀持⽹络编程</p>
+<p>编译与解释并存</p>
+<h1 id="JVM-JDK-和-JRE"><a href="#JVM-JDK-和-JRE" class="headerlink" title="JVM JDK 和 JRE"></a>JVM JDK 和 JRE</h1><p>Java 虚拟机（JVM）是运⾏ Java 字节码的虚拟机。JVM 有针对不同系统的特定实现 （Windows，Linux，macOS），⽬的是使⽤相同的字节码，它们都会给出相同的结果。字节码 和不同系统的 JVM 实现是 Java 语⾔“⼀次编译，随处可以运⾏”的关键所在。 </p>
+<p>JDK 拥有 JRE 所拥有的⼀切，还有编 译器（javac）和⼯具（如 javadoc 和 jdb）。它能够创建和编译程序。</p>
+<p> JRE 是 Java 运⾏时环境。它是运⾏已编译 Java 程序所需的所有内容的集合，包括 Java 虚拟机 （JVM），Java 类库，java 命令和其他的⼀些基础构件。但是，它不能⽤于创建新程序。 </p>
+<p>一般情况下，如果只是为了运⾏⼀下 Java 程序的话，那么只需要安装 JRE 就可以了。如果需要进⾏⼀ 些 Java 编程⽅⾯的⼯作，那么就需要安装 JDK 了。</p>
+<h1 id="字符型常量和字符串常量的区别"><a href="#字符型常量和字符串常量的区别" class="headerlink" title="字符型常量和字符串常量的区别"></a>字符型常量和字符串常量的区别</h1><p>形式上: 字符常量是单引号引起的⼀个字符; 字符串常量是双引号引起的若⼲个字符 </p>
+<p>含义上: 字符常量相当于⼀个整型值( ASCII 值),可以参加表达式运算; 字符串常量代表⼀个地 址值(该字符串在内存中存放位置) </p>
+<p>占内存⼤⼩：字符常量只占 2 个字节; 字符串常量占若⼲个字节 (注意： char 在 Java 中占两 个字节)</p>
+<h1 id="构造器-Constructor-是否可被-override"><a href="#构造器-Constructor-是否可被-override" class="headerlink" title="构造器 Constructor 是否可被 override"></a>构造器 Constructor 是否可被 override</h1><p>Constructor 不能被 override（重写）,但是可以 overload（重载）,所以你可以看到⼀个类中有多 个构造函数的情况。</p>
+<h1 id="重载和重写的区别"><a href="#重载和重写的区别" class="headerlink" title="重载和重写的区别"></a>重载和重写的区别</h1><p>重载就是同样的⼀个⽅法能够根据输⼊数据的不同，做出不同的处理 </p>
+<p>重写就是当⼦类继承⾃⽗类的相同⽅法，输⼊数据⼀样，但要做出有别于⽗类的响应时，就要覆盖⽗类⽅法</p>
+<table>
+<thead>
+<tr>
+<th>区别点</th>
+<th>重载</th>
+<th>重写</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>范围</td>
+<td>同一个类</td>
+<td>子类</td>
+</tr>
+<tr>
+<td>参数列表</td>
+<td>必须不同</td>
+<td>必须一致</td>
+</tr>
+<tr>
+<td>返回类型</td>
+<td>可不同</td>
+<td>⼦类⽅法返回值类型应⽐⽗类⽅法返回值类型更⼩或相等(子类返回的更具体了)</td>
+</tr>
+<tr>
+<td>异常</td>
+<td>可不同</td>
+<td>⼦类⽅法声明抛出的异常类应⽐⽗类⽅法声明抛出的异常类更⼩或相等(父类异常范围大于等于子类)</td>
+</tr>
+<tr>
+<td>访问修饰符</td>
+<td>可不同</td>
+<td>⼦类⽅法的访问权限应⽐⽗类⽅法的访问权限更⼤或相等</td>
+</tr>
+<tr>
+<td>发⽣阶段</td>
+<td>编译期</td>
+<td>运⾏期</td>
+</tr>
+</tbody></table>
+<h1 id="Java-⾯向对象编程三⼤特性-封装-继承-多态"><a href="#Java-⾯向对象编程三⼤特性-封装-继承-多态" class="headerlink" title="Java ⾯向对象编程三⼤特性: 封装 继承 多态"></a>Java ⾯向对象编程三⼤特性: 封装 继承 多态</h1><p>封装把⼀个对象的属性私有化，同时提供⼀些可以被外界访问的属性的⽅法。</p>
+<p>继承是使⽤已存在的类的定义作为基础建⽴新类的技术，新类的定义可以增加新的数据或新的功 能，也可以⽤⽗类的功能，但不能选择性地继承⽗类。通过使⽤继承我们能够⾮常⽅便地复⽤以 前的代码。<br>关于继承如下 3 点请记住： </p>
+<ol>
+<li>⼦类拥有⽗类对象所有的属性和⽅法（包括私有属性和私有⽅法），但是⽗类中的私有属性 和⽅法⼦类是⽆法访问，只是拥有。 </li>
+<li>⼦类可以拥有⾃⼰属性和⽅法，即⼦类可以对⽗类进⾏扩展。 </li>
+<li>⼦类可以⽤⾃⼰的⽅式实现⽗类的⽅法。</li>
+</ol>
+<p>所谓多态就是指程序中定义的引⽤变量所指向的具体类型和通过该引⽤变量发出的⽅法调⽤在编 程时并不确定，⽽是在程序运⾏期间才确定，即⼀个引⽤变量到底会指向哪个类的实例对象，该 引⽤变量发出的⽅法调⽤到底是哪个类中实现的⽅法，必须在由程序运⾏期间才能决定。 在 Java 中有两种形式可以实现多态：继承（多个⼦类对同⼀⽅法的重写）和接⼝（实现接⼝并 覆盖接⼝中同⼀⽅法）</p>
+<h1 id="String-StringBuffer-和-StringBuilder-的区别是什么-String-为什么是不可变的"><a href="#String-StringBuffer-和-StringBuilder-的区别是什么-String-为什么是不可变的" class="headerlink" title="String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?"></a>String StringBuffer 和 StringBuilder 的区别是什么? String 为什么是不可变的?</h1><p>String 类中使⽤ final 关键字修饰字符数组来保存字符串， private final char value[] ，所以 String 对象是不可变的</p>
+<p>⽽ StringBuilder 与 StringBuffer 都继承⾃ AbstractStringBuilder 类，在 AbstractStringBuilder 中 也是使⽤字符数组保存字符串 char[]value 但是没有⽤ final 关键字修饰，所以这两种对象都是可 变的</p>
+<p><strong>线程安全性</strong>  String 中的对象是不可变的，也就可以理解为常量，线程安全。AbstractStringBuilder 是 StringBuilder 与 StringBuffer 的公共⽗类，定义了⼀些字符串的基本操作，如 expandCapacity、 append、insert、indexOf 等公共⽅法。StringBuffer 对⽅法加了同步锁或者对调⽤的⽅法加了同 步锁，所以是线程安全的。StringBuilder 并没有对⽅法进⾏加同步锁，所以是⾮线程安全的。</p>
+<p><strong>性能</strong> 每次对 String 类型进⾏改变的时候，都会⽣成⼀个新的 String 对象，然后将指针指向新的 String 对象。StringBuffer 每次都会对 StringBuffer 对象本身进⾏操作，⽽不是⽣成新的对象并改变对象 引⽤。相同情况下使⽤ StringBuilder 相⽐使⽤ StringBuffer 仅能获得 10%~15% 左右的性能提 升，但却要冒多线程不安全的⻛险。</p>
+<h1 id="⾃动装箱与拆箱"><a href="#⾃动装箱与拆箱" class="headerlink" title="⾃动装箱与拆箱"></a>⾃动装箱与拆箱</h1><p>装箱：将基本类型⽤它们对应的引⽤类型包装起来； </p>
+<p>拆箱：将包装类型转换为基本数据类型；</p>
+<h1 id="在⼀个静态⽅法内调⽤⼀个⾮静态成员为什么是⾮法的"><a href="#在⼀个静态⽅法内调⽤⼀个⾮静态成员为什么是⾮法的" class="headerlink" title="在⼀个静态⽅法内调⽤⼀个⾮静态成员为什么是⾮法的"></a>在⼀个静态⽅法内调⽤⼀个⾮静态成员为什么是⾮法的</h1><p>由于静态⽅法可以不通过对象进⾏调⽤，因此在静态⽅法⾥，不能调⽤其他⾮静态变量，也不可 以访问⾮静态变量成员。</p>
+<h1 id="在-Java-中定义⼀个不做事且没有参数的构造⽅法的作⽤"><a href="#在-Java-中定义⼀个不做事且没有参数的构造⽅法的作⽤" class="headerlink" title="在 Java 中定义⼀个不做事且没有参数的构造⽅法的作⽤"></a>在 Java 中定义⼀个不做事且没有参数的构造⽅法的作⽤</h1><p>Java 程序在执⾏⼦类的构造⽅法之前，如果没有⽤ super() 来调⽤⽗类特定的构造⽅法，则会调 ⽤⽗类中“没有参数的构造⽅法”。因此，如果⽗类中只定义了有参数的构造⽅法，⽽在⼦类的构 造⽅法中⼜没有⽤ super() 来调⽤⽗类中特定的构造⽅法，则编译时将发⽣错误，因为 Java 程 序在⽗类中找不到没有参数的构造⽅法可供执⾏。解决办法是在⽗类⾥加上⼀个不做事且没有参 数的构造⽅法</p>
+<h1 id="接⼝和抽象类的区别"><a href="#接⼝和抽象类的区别" class="headerlink" title="接⼝和抽象类的区别"></a>接⼝和抽象类的区别</h1><p>接⼝⽅法可以有默认 实现，抽象类可以有⾮抽象的⽅法。</p>
+<p>接⼝中除了 static 、 final 变量，不能有其他变量，⽽抽象类中则不⼀定。</p>
+<p>⼀个类可以实现多个接⼝，但只能实现⼀个抽象类。接⼝⾃⼰本身可以通过 extends 关键 字扩展多个接⼝。 </p>
+<p>接⼝⽅法默认修饰符是 public ，抽象⽅法可以有 public 、 protected 和 default 这些修饰 符（抽象⽅法就是为了被重写所以不能使⽤ private 关键字修饰！）。 </p>
+<p>从设计层⾯来说，抽象是对类的抽象，是⼀种模板设计，⽽接⼝是对⾏为的抽象，是⼀种⾏为的规范。</p>
+<h1 id="成员变量与局部变量的区别有哪些"><a href="#成员变量与局部变量的区别有哪些" class="headerlink" title="成员变量与局部变量的区别有哪些"></a>成员变量与局部变量的区别有哪些</h1><p>从语法形式上看:成员变量是属于类的，⽽局部变量是在⽅法中定义的变量或是⽅法的参数； 成员变量可以被 public , private , static 等修饰符所修饰，⽽局部变量不能被访问控制修饰 符及 static 所修饰；但是，成员变量和局部变量都能被 final 所修饰。</p>
+<p>从变量在内存中的存储⽅式来看:如果成员变量是使⽤ static 修饰的，那么这个成员变量是属 于类的，如果没有使⽤ static 修饰，这个成员变量是属于实例的。对象存于堆内存，如果局 部变量类型为基本数据类型，那么存储在栈内存，如果为引⽤数据类型，那存放的是指向堆 内存对象的引⽤或者是指向常量池中的地址。 3. 从变量在内存中的⽣存时间上看:成员变量是对象的⼀部分，它随着对象的创建⽽存在，⽽局 部变量随着⽅法的调⽤⽽⾃动消失。 4. 成员变量如果没有被赋初值:则会⾃动以类型的默认值⽽赋值（⼀种情况例外:被 final 修饰 的成员变量也必须显式地赋值），⽽局部变量则不会⾃动赋值</p>
+
     </div>
 
     
@@ -297,6 +381,9 @@
                 </a>
             </div>
             <div class="post-nav-item">
+                <a href="/2021/10/22/%E6%8B%A6%E6%88%AA%E5%99%A8/" rel="next" title="拦截器">
+                  拦截器 <i class="fa fa-chevron-right"></i>
+                </a>
             </div>
           </div>
     </footer>

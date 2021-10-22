@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/avatar.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/16x16.png">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
+
+<script class="next-config" data-name="main" type="application/json">{"hostname":"tanbinzhi.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
+<meta name="description" content="准备123456&#x2F;&#x2F;设置用户名和邮箱$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email &quot;email@example.com&quot;&#x2F;&#x2F;检查$ git config user.name$ git config user.email  远程仓库配置步骤1.创建SSH">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Git">
+<meta property="og:url" content="http://tanbinzhi.github.io/2021/09/28/Git/index.html">
+<meta property="og:site_name" content="彬智的个人博客">
+<meta property="og:description" content="准备123456&#x2F;&#x2F;设置用户名和邮箱$ git config --global user.name &quot;Your Name&quot;$ git config --global user.email &quot;email@example.com&quot;&#x2F;&#x2F;检查$ git config user.name$ git config user.email  远程仓库配置步骤1.创建SSH">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-09-28T05:33:59.000Z">
+<meta property="article:modified_time" content="2021-10-22T10:49:11.602Z">
+<meta property="article:author" content="tanbinzhi">
+<meta property="article:tag" content="Java">
+<meta name="twitter:card" content="summary">
+
+
+<link rel="canonical" href="http://tanbinzhi.github.io/2021/09/28/Git/">
+
+
+
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://tanbinzhi.github.io/2021/09/28/Git/","path":"2021/09/28/Git/","title":"Git"}</script>
+
+<script class="next-config" data-name="calendar" type="application/json">""</script>
+<title>Git | 彬智的个人博客</title>
+  
+
+
+
+
+  <noscript>
+    <link rel="stylesheet" href="/css/noscript.css">
+  </noscript>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="headband"></div>
+
+  <main class="main">
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏" role="button">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <i class="logo-line"></i>
+      <h1 class="site-title">彬智的个人博客</h1>
+      <i class="logo-line"></i>
+    </a>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  <ul class="main-menu menu">
+        <li class="menu-item menu-item-home"><a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a></li>
+        <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fa fa-user fa-fw"></i>关于</a></li>
+        <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
+        <li class="menu-item menu-item-archives"><a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a></li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup"><div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off" maxlength="80"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close" role="button">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div class="search-result-container no-result">
+  <div class="search-result-icon">
+    <i class="fa fa-spinner fa-pulse fa-5x"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+        
+  
+  <div class="toggle sidebar-toggle" role="button">
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+    <span class="toggle-line"></span>
+  </div>
+
+  <aside class="sidebar">
+
+    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+      <ul class="sidebar-nav">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <div class="sidebar-panel-container">
+        <!--noindex-->
+        <div class="post-toc-wrap sidebar-panel">
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%87%86%E5%A4%87"><span class="nav-number">1.</span> <span class="nav-text">准备</span></a><ol class="nav-child"><li class="nav-item nav-level-5"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E9%85%8D%E7%BD%AE%E6%AD%A5%E9%AA%A4"><span class="nav-number">1.1.</span> <span class="nav-text">远程仓库配置步骤</span></a></li><li class="nav-item nav-level-5"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%85%B3%E8%81%94"><span class="nav-number">1.2.</span> <span class="nav-text">本地仓库和远程仓库关联</span></a></li></ol></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93-gt-%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93"><span class="nav-number">2.</span> <span class="nav-text">本地仓库-&gt;远程仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93-gt-%E6%9C%AC%E5%9C%B0%E4%BB%93%E5%BA%93"><span class="nav-number">3.</span> <span class="nav-text">远程仓库-&gt;本地仓库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BF%AE%E5%A4%8Dbug"><span class="nav-number">4.</span> <span class="nav-text">修复bug</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#git%E5%91%BD%E4%BB%A4"><span class="nav-number">5.</span> <span class="nav-text">git命令</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#GitHub"><span class="nav-number">6.</span> <span class="nav-text">GitHub</span></a></li></ol></div>
+        </div>
+        <!--/noindex-->
+
+        <div class="site-overview-wrap sidebar-panel">
+          <div class="site-author site-overview-item animated" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="tanbinzhi"
+      src="/images/avatar.gif">
+  <p class="site-author-name" itemprop="name">tanbinzhi</p>
+  <div class="site-description" itemprop="description">加油！陌生人。</div>
+</div>
+<div class="site-state-wrap site-overview-item animated">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+        <a href="/archives/">
+          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-tags">
+          <a href="/tags/">
+        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author site-overview-item animated">
+      <span class="links-of-author-item">
+        <a href="tencent://message/?Menu=yes&uin=2397167772" title="QQ → tencent:&#x2F;&#x2F;message&#x2F;?Menu&#x3D;yes&amp;uin&#x3D;2397167772" rel="noopener" target="_blank"><i class="fab fa-qq fa-fw"></i>QQ</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://github.com/tanbinzhi" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;tanbinzhi" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:2397167772@qq.com" title="E-Mail → mailto:2397167772@qq.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+  </div>
+
+
+
+        </div>
+      </div>
+    </div>
+  </aside>
+  <div class="sidebar-dimmer"></div>
+
+
+    </header>
+
+    
+  <div class="back-to-top" role="button" aria-label="返回顶部">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+<noscript>
+  <div class="noscript-warning">Theme NexT works best with JavaScript enabled</div>
+</noscript>
+
+
+    <div class="main-inner post posts-expand">
+
+
+  
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://tanbinzhi.github.io/2021/09/28/Git/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="tanbinzhi">
+      <meta itemprop="description" content="加油！陌生人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彬智的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Git
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-28 13:33:59" itemprop="dateCreated datePublished" datetime="2021-09-28T13:33:59+08:00">2021-09-28</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-10-22 18:49:11" itemprop="dateModified" datetime="2021-10-22T18:49:11+08:00">2021-10-22</time>
+      </span>
+
+  
+    <span id="/2021/09/28/Git/" class="post-meta-item leancloud_visitors" data-flag-title="Git" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/09/28/Git/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2021/09/28/Git/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <h4 id="准备"><a href="#准备" class="headerlink" title="准备"></a>准备</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//设置用户名和邮箱</span><br><span class="line">$ git config --global user.name &quot;Your Name&quot;</span><br><span class="line">$ git config --global user.email &quot;email@example.com&quot;</span><br><span class="line">//检查</span><br><span class="line">$ git config user.name</span><br><span class="line">$ git config user.email</span><br></pre></td></tr></table></figure>
+
+<h5 id="远程仓库配置步骤"><a href="#远程仓库配置步骤" class="headerlink" title="远程仓库配置步骤"></a>远程仓库配置步骤</h5><p>1.创建SSH Key<br><code>$ ssh-keygen -t rsa -C &quot;youremail@example.com&quot;</code><br>用户主目录里找到.ssh目录，里面有id_rsa和id_rsa.pub两个文件，这两个就是SSH Key的秘钥对，id_rsa是私钥，不能泄露出去，id_rsa.pub是公钥，可以放心地告诉任何人<br>2登陆GitHub，打开“Account settings”，“SSH Keys”页面：然后，点“Add SSH Key”，填上任意Title，在Key文本框里粘贴id_rsa.pub文件的内容</p>
+<h5 id="本地仓库和远程仓库关联"><a href="#本地仓库和远程仓库关联" class="headerlink" title="本地仓库和远程仓库关联"></a>本地仓库和远程仓库关联</h5><p>1.new repository取好Repository name,</p>
+<p>Initialize this repository with:</p>
+<p>Skip this step if you’re importing an existing repository.</p>
+<p>(是否需要加readme，用于从零开始开发，如果导入一个本地已存在的仓库，跳过此步骤)</p>
+<p>后create repository</p>
+<p>2.在本地仓库下运行命令：</p>
+<p><code>$ git remote add origin git@github.com:tanbinzhi/&lt;Repository name&gt;.git</code></p>
+<p>把<code>tanbinzhi</code>替换成自己的GitHub账户名</p>
+<p><code>origin</code>是远程库的名字</p>
+<h4 id="本地仓库-gt-远程仓库"><a href="#本地仓库-gt-远程仓库" class="headerlink" title="本地仓库-&gt;远程仓库"></a>本地仓库-&gt;远程仓库</h4><p><code>$ git push -u origin master</code></p>
+<p>由于远程库是空的，我们第一次推送<code>master</code>分支时，加上了<code>-u</code>参数，Git不但会把本地的<code>master</code>分支内容推送到远程新的<code>master</code>分支，还会把本地的<code>master</code>分支和远程的<code>master</code>分支关联起来，在以后的推送或者拉取时就可以简化命令。</p>
+<p><code>$ git push origin master</code></p>
+<p>把本地<code>master</code>分支的最新修改推送至远程仓库的<code>master</code>分支的简写</p>
+<p><code>$ git remote -v</code></p>
+<p>查看远程库信息</p>
+<p><code>$ git remote rm &lt;name&gt;</code></p>
+<p>解除本地和远程的绑定关系</p>
+<h4 id="远程仓库-gt-本地仓库"><a href="#远程仓库-gt-本地仓库" class="headerlink" title="远程仓库-&gt;本地仓库"></a>远程仓库-&gt;本地仓库</h4><p><code>$ git clone git@github.com:tanbinzhi/&lt;Repository name&gt;.git</code></p>
+<h4 id="修复bug"><a href="#修复bug" class="headerlink" title="修复bug"></a>修复bug</h4><p><code>$ git stash</code></p>
+<p>把当前工作现场“储藏”起来，等以后恢复现场后继续工作</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">假定需要在`master`分支上修复，就从`master`创建临时分支</span><br><span class="line">$ git checkout master</span><br><span class="line">$ git checkout -b issue-101</span><br><span class="line">$ git add readme.txt </span><br><span class="line">$ git commit -m &quot;fix bug 101&quot;</span><br><span class="line">[issue-101 4c805e2] fix bug 101</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br><span class="line">$ git switch master</span><br><span class="line">$ git merge --no-ff -m &quot;merged bug fix 101&quot; issue-101</span><br><span class="line">接着回到dev分支干活</span><br><span class="line">$ git switch dev</span><br><span class="line">$ git stash pop     恢复工作现场的同时把stash内容也删了</span><br></pre></td></tr></table></figure>
+
+<p><code>$ git stash list</code></p>
+<p>查看stash内容</p>
+<p><code>$ git stash apply stash@&#123;0&#125;</code></p>
+<p>恢复指定的stash</p>
+<p><code>$ git cherry-pick 4c805e2</code></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ git cherry-pick 4c805e2</span><br><span class="line">[master 1d4b803] fix bug 101</span><br><span class="line"> 1 file changed, 1 insertion(+), 1 deletion(-)</span><br></pre></td></tr></table></figure>
+
+<p><code>4c805e2</code>是在bug <code>$ git commit</code>时出现的，在master分支上修复的bug，想要合并到当前dev分支，可以用<code>git cherry-pick &lt;commit&gt;</code>命令，把bug提交的修改“复制”到当前分支，避免重复劳动。</p>
+<h4 id="git命令"><a href="#git命令" class="headerlink" title="git命令"></a>git命令</h4><p><code>$ git init</code></p>
+<p>初始化一个Git仓库</p>
+<p><code>$ git add readme.txt</code></p>
+<p>把文件(例子为readme.txt)添加到仓库,可反复多次使用，添加多个文件</p>
+<p>实际上就是把文件修改添加到暂存区</p>
+<p><code>$ git commit -m &quot;wrote a readme file&quot;</code></p>
+<p>把文件提交到仓库,<code>-m</code>后面输入的是本次提交的说明,方便找到改动记录</p>
+<p>实际上就是把暂存区的所有内容提交到当前分支</p>
+<p><code>$ git checkout -b dev</code></p>
+<p>即<code>$ git branch dev</code>//创建dev分支       <code>$ git checkout dev</code>//切换到dev分支</p>
+<p><code>$ git checkout -b dev origin/dev</code></p>
+<p>在本地创建和远程分支对应的分支（包含了下面一条命令）</p>
+<p><code>$ git branch --set-upstream-to=origin/dev dev</code></p>
+<p>建立本地分支和远程分支的关联</p>
+<p><code>$ git pull</code></p>
+<p>把最新的提交从<code>origin/dev</code>抓下来(会自动合并，不需要再git merge)</p>
+<p><code>$ git merge (--no-ff -m &quot;merged bug fix 101&quot;) dev</code></p>
+<p>切换到master分支执行该命令的含义就是：把<code>dev</code>分支的工作成果合并到<code>master</code>分支上</p>
+<p>括号里的内容表示强制禁用<code>Fast forward</code>模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息，否则删除分支后，会丢掉分支信息</p>
+<p><code>$ git branch -d dev</code></p>
+<p>删除dev分支</p>
+<p><code>$ git branch</code></p>
+<p>列出所有分支，当前分支前面会标一个<code>*</code>号</p>
+<p><code>$ git status</code></p>
+<p>随时掌握工作区的状态</p>
+<p><code>$ git diff readme.txt </code></p>
+<p>当有文件（如readme.txt）被修改过，但是没有添加到git仓库，<code>git status</code>会告诉你有文件被修改过，用<code>git diff</code>可以查看修改内容。</p>
+<p><code>$ git log --pretty=oneline</code></p>
+<p>结果类似：</p>
+<p><code>c16001c67a129172e0ea8ed83a09c1e4e4de7550 (HEAD -&gt; master) 修改了第一行 bd6c3e05285202f37c57149e041cca3ace303cb9 新增readme</code></p>
+<p>显示从最近到最远的提交日志,<code>--pretty=oneline</code>参数简化日志输出信息</p>
+<p>结果里面前面的数字表示版本号</p>
+<p><code>$ git reset --hard HEAD^</code></p>
+<p>回退到上一个版本</p>
+<p>在Git中，用<code>HEAD</code>表示当前版本,上一个版本是<code>HEAD^</code>，上上一个版本是<code>HEAD^^</code>，往上100个版本可以写成<code>HEAD~100</code></p>
+<p><code>$ git reset --hard c16001</code></p>
+<p>回退到版本号（如c16001….）指定版本，不需要写全</p>
+<p><code>$ git reflog</code></p>
+<p>查看命令历史</p>
+<p><code>$ git restore &lt;file&gt;</code></p>
+<p> to unstage(撤回暂存区)</p>
+<p><code>$  git restore --staged &lt;file&gt;</code></p>
+<p> to discard changes in working directory(撤回在工作目录的改变)</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">Changes to be committed:</span><br><span class="line">  (use <span class="string">&quot;git restore --staged &lt;file&gt;...&quot;</span> to unstage)</span><br><span class="line">        modified:   readme.txt</span><br><span class="line"></span><br><span class="line">Changes <span class="keyword">not</span> staged <span class="keyword">for</span> commit:</span><br><span class="line">  (use <span class="string">&quot;git add &lt;file&gt;...&quot;</span> to update what will be committed)</span><br><span class="line">  (use <span class="string">&quot;git restore &lt;file&gt;...&quot;</span> to discard changes in working directory)</span><br><span class="line">        modified:   readme.txt</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>$ git remote -v</code></p>
+<p>查看远程库的信息</p>
+<p><code>git tag &lt;tagname&gt; (commit id)</code> </p>
+<p>新建一个标签，默认为<code>HEAD</code>，也可以指定一个commit id(git log 可以查看commit id)；</p>
+<ul>
+<li><p><code>git tag -a &lt;tagname&gt; -m &quot;blablabla...&quot;</code>可以指定标签信息；</p>
+</li>
+<li><p><code>git tag</code>可以查看所有标签。</p>
+</li>
+<li><p><code>git show &lt;tagname&gt;</code>查看标签信息</p>
+</li>
+<li><p><code>git push origin &lt;tagname&gt;</code>推送一个本地标签；</p>
+</li>
+<li><p><code>git push origin --tags</code>推送全部未推送过的本地标签；</p>
+</li>
+<li><p><code>git tag -d &lt;tagname&gt;</code>删除一个本地标签；</p>
+</li>
+<li><p><code>git push origin :refs/tags/&lt;tagname&gt;</code>删除一个远程标签。</p>
+</li>
+</ul>
+<h4 id="GitHub"><a href="#GitHub" class="headerlink" title="GitHub"></a>GitHub</h4><p>点“Fork”就在自己的账号下克隆了一个xxx(repo name)仓库，然后，从自己的账号下clone：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git clone git@github.com:tanbinzhi/&lt;repo name&gt;.git</span><br></pre></td></tr></table></figure>
+
+<p>一定要从自己的账号下clone仓库，这样你才能推送修改。如果从xxx的作者的仓库地址如bootstrap项目<code>git@github.com:twbs/bootstrap.git</code>克隆，因为没有权限，你将不能推送修改。</p>
+
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Java/" rel="tag"># Java</a>
+          </div>
+
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/09/28/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/" rel="prev" title="操作系统">
+                  <i class="fa fa-chevron-left"></i> 操作系统
+                </a>
+            </div>
+            <div class="post-nav-item">
+                <a href="/2021/10/12/hexo%E5%91%BD%E4%BB%A4/" rel="next" title="hexo命令">
+                  hexo命令 <i class="fa fa-chevron-right"></i>
+                </a>
+            </div>
+          </div>
+    </footer>
+  </article>
+</div>
+
+
+
+
+
+
+    <div class="comments" id="SOHUCS"></div>
+</div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+
+
+<div class="copyright">
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">tanbinzhi</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/pisces/" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+    </div>
+  </footer>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" integrity="sha256-XL2inqUJaslATFnHdJOi9GfQ60on8Wx1C2H8DYiN1xY=" crossorigin="anonymous"></script>
+<script src="/js/comments.js"></script><script src="/js/utils.js"></script><script src="/js/next-boot.js"></script>
+
+  
+<script src="https://cdn.jsdelivr.net/npm/hexo-generator-searchdb@1.4.0/dist/search.js" integrity="sha256-vXZMYLEqsROAXkEw93GGIvaB2ab+QW6w3+1ahD9nXXA=" crossorigin="anonymous"></script>
+<script src="/js/third-party/search/local-search.js"></script>
+
+
+
+
+
+  
+
+
+  <script class="next-config" data-name="leancloud_visitors" type="application/json">{"enable":true,"app_id":"FKwTJkgvlXqWUM5UXxWcTW97-gzGzoHsz","app_key":"sN8NYlb4zHqVPiGnRCoKA9jw","server_url":null,"security":false,"betterPerformance":true}</script>
+  <script src="/js/third-party/statistics/lean-analytics.js"></script>
+
+
+<script class="next-config" data-name="changyan" type="application/json">{"enable":true,"appid":"cyvHBKb2V","appkey":"865780c9136c505ba9ec47c48f7f2398"}</script>
+<script src="/js/third-party/comments/changyan.js"></script>
+
+</body>
+</html>
