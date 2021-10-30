@@ -19,28 +19,28 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"tanbinzhi.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="什么是MySQLMySQL 是⼀种关系型数据库，MySQL的默认端⼝号是3306，开源免费 存储引擎1show engines;#查看MySQL提供的所有存储引擎  MyISAM和InnoDB区别⾏级锁 : MyISAM 只有表级锁，⽽InnoDB ⽀持⾏级锁和表级锁,默认为⾏级锁。 事务： MyISAM不支持事务，但InnoDB⽀持事务。  崩溃后的安全恢复：InnoDB有崩溃修复能⼒ 外键：">
+<meta name="description" content="模板 12345678910111213141516&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot; ?&gt;&lt;!DOCTYPE mapper PUBLIC &quot;-&#x2F;&#x2F;mybatis.org&#x2F;&#x2F;DTD Mapper 3.0&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;mybatis.org&#x2F;dtd&#x2F;mybati">
 <meta property="og:type" content="article">
-<meta property="og:title" content="MySQL">
-<meta property="og:url" content="http://tanbinzhi.github.io/2021/09/26/MySQL/index.html">
+<meta property="og:title" content="mybatis映射文件头">
+<meta property="og:url" content="http://tanbinzhi.github.io/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/index.html">
 <meta property="og:site_name" content="彬智的个人博客">
-<meta property="og:description" content="什么是MySQLMySQL 是⼀种关系型数据库，MySQL的默认端⼝号是3306，开源免费 存储引擎1show engines;#查看MySQL提供的所有存储引擎  MyISAM和InnoDB区别⾏级锁 : MyISAM 只有表级锁，⽽InnoDB ⽀持⾏级锁和表级锁,默认为⾏级锁。 事务： MyISAM不支持事务，但InnoDB⽀持事务。  崩溃后的安全恢复：InnoDB有崩溃修复能⼒ 外键：">
+<meta property="og:description" content="模板 12345678910111213141516&lt;?xml version&#x3D;&quot;1.0&quot; encoding&#x3D;&quot;UTF-8&quot; ?&gt;&lt;!DOCTYPE mapper PUBLIC &quot;-&#x2F;&#x2F;mybatis.org&#x2F;&#x2F;DTD Mapper 3.0&#x2F;&#x2F;EN&quot; &quot;http:&#x2F;&#x2F;mybatis.org&#x2F;dtd&#x2F;mybati">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2021-09-26T13:53:44.000Z">
-<meta property="article:modified_time" content="2021-10-09T08:09:01.548Z">
+<meta property="article:published_time" content="2021-10-30T11:56:37.000Z">
+<meta property="article:modified_time" content="2021-10-30T11:59:18.083Z">
 <meta property="article:author" content="tanbinzhi">
-<meta property="article:tag" content="MySQL">
+<meta property="article:tag" content="springboot">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://tanbinzhi.github.io/2021/09/26/MySQL/">
+<link rel="canonical" href="http://tanbinzhi.github.io/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://tanbinzhi.github.io/2021/09/26/MySQL/","path":"2021/09/26/MySQL/","title":"MySQL"}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://tanbinzhi.github.io/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/","path":"2021/10/30/mybatis映射文件头/","title":"mybatis映射文件头"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>MySQL | 彬智的个人博客</title>
+<title>mybatis映射文件头 | 彬智的个人博客</title>
   
 
 
@@ -132,7 +132,7 @@
 
   <aside class="sidebar">
 
-    <div class="sidebar-inner sidebar-nav-active sidebar-toc-active">
+    <div class="sidebar-inner sidebar-overview-active">
       <ul class="sidebar-nav">
         <li class="sidebar-nav-toc">
           文章目录
@@ -145,7 +145,6 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BB%80%E4%B9%88%E6%98%AFMySQL"><span class="nav-number">1.</span> <span class="nav-text">什么是MySQL</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E"><span class="nav-number">2.</span> <span class="nav-text">存储引擎</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#MyISAM%E5%92%8CInnoDB%E5%8C%BA%E5%88%AB"><span class="nav-number">3.</span> <span class="nav-text">MyISAM和InnoDB区别</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E9%9B%86%E5%8F%8A%E6%A0%A1%E5%AF%B9%E8%A7%84%E5%88%99"><span class="nav-number">4.</span> <span class="nav-text">字符集及校对规则</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E7%B4%A2%E5%BC%95"><span class="nav-number">5.</span> <span class="nav-text">索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8B%E5%8A%A1"><span class="nav-number">6.</span> <span class="nav-text">事务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%B9%B6%E5%8F%91%E4%BA%8B%E5%8A%A1%E5%B8%A6%E6%9D%A5%E5%93%AA%E4%BA%9B%E9%97%AE%E9%A2%98"><span class="nav-number">7.</span> <span class="nav-text">并发事务带来哪些问题</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E4%BA%8B%E5%8A%A1%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E6%9C%89%E5%93%AA%E4%BA%9B-MySQL%E7%9A%84%E9%BB%98%E8%AE%A4%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB%E6%98%AF"><span class="nav-number">8.</span> <span class="nav-text">事务隔离级别有哪些?MySQL的默认隔离级别是?</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -216,7 +215,7 @@
   
 
   <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://tanbinzhi.github.io/2021/09/26/MySQL/">
+    <link itemprop="mainEntityOfPage" href="http://tanbinzhi.github.io/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.gif">
@@ -229,7 +228,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          MySQL
+          mybatis映射文件头
         </h1>
 
         <div class="post-meta-container">
@@ -239,19 +238,13 @@
         <i class="far fa-calendar"></i>
       </span>
       <span class="post-meta-item-text">发表于</span>
+      
 
-      <time title="创建时间：2021-09-26 21:53:44" itemprop="dateCreated datePublished" datetime="2021-09-26T21:53:44+08:00">2021-09-26</time>
+      <time title="创建时间：2021-10-30 19:56:37 / 修改时间：19:59:18" itemprop="dateCreated datePublished" datetime="2021-10-30T19:56:37+08:00">2021-10-30</time>
     </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-09 16:09:01" itemprop="dateModified" datetime="2021-10-09T16:09:01+08:00">2021-10-09</time>
-      </span>
 
   
-    <span id="/2021/09/26/MySQL/" class="post-meta-item leancloud_visitors" data-flag-title="MySQL" title="阅读次数">
+    <span id="/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/" class="post-meta-item leancloud_visitors" data-flag-title="mybatis映射文件头" title="阅读次数">
       <span class="post-meta-item-icon">
         <i class="far fa-eye"></i>
       </span>
@@ -267,8 +260,8 @@
       <span class="post-meta-item-text">Changyan：</span>
     
     
-      <a title="changyan" href="/2021/09/26/MySQL/#SOHUCS" itemprop="discussionUrl">
-        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2021/09/26/MySQL/" itemprop="commentCount"></span>
+      <a title="changyan" href="/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2021/10/30/mybatis映射文件头/" itemprop="commentCount"></span>
       </a>
     
   </span>
@@ -283,45 +276,11 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="什么是MySQL"><a href="#什么是MySQL" class="headerlink" title="什么是MySQL"></a>什么是MySQL</h4><p>MySQL 是⼀种关系型数据库，MySQL的默认端⼝号是3306，开源免费</p>
-<h4 id="存储引擎"><a href="#存储引擎" class="headerlink" title="存储引擎"></a>存储引擎</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> engines;#查看MySQL提供的所有存储引擎</span><br></pre></td></tr></table></figure>
+        <p><strong>模板</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span> <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span> <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;org.hand.order33309.infra.mapper.HodrCompanyMapper&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 可根据自己的需求，是否要使用 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;BaseResultMap&quot;</span> <span class="attr">type</span>=<span class="string">&quot;org.hand.order33309.domain.entity.HodrCompany&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;company_id&quot;</span> <span class="attr">property</span>=<span class="string">&quot;companyId&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;company_number&quot;</span> <span class="attr">property</span>=<span class="string">&quot;companyNumber&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;company_name&quot;</span> <span class="attr">property</span>=<span class="string">&quot;companyName&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;enabled_flag&quot;</span> <span class="attr">property</span>=<span class="string">&quot;enabledFlag&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;created_by&quot;</span> <span class="attr">property</span>=<span class="string">&quot;createdBy&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;creation_date&quot;</span> <span class="attr">property</span>=<span class="string">&quot;creationDate&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DATE&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;last_updated_by&quot;</span> <span class="attr">property</span>=<span class="string">&quot;lastUpdatedBy&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;last_update_date&quot;</span> <span class="attr">property</span>=<span class="string">&quot;lastUpdateDate&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DATE&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;object_version_number&quot;</span> <span class="attr">property</span>=<span class="string">&quot;objectVersionNumber&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="MyISAM和InnoDB区别"><a href="#MyISAM和InnoDB区别" class="headerlink" title="MyISAM和InnoDB区别"></a>MyISAM和InnoDB区别</h4><p>⾏级锁 : MyISAM 只有表级锁，⽽InnoDB ⽀持⾏级锁和表级锁,默认为⾏级锁。</p>
-<p>事务： MyISAM不支持事务，但InnoDB⽀持事务。 </p>
-<p>崩溃后的安全恢复：InnoDB有崩溃修复能⼒</p>
-<p>外键： MyISAM不⽀持，InnoDB⽀持。 </p>
-<p>MVCC(多版本并发控制) ：InnoDB ⽀持MVCC。MVCC可以使⽤ 乐 观锁 和 悲观锁来实现</p>
-<h4 id="字符集及校对规则"><a href="#字符集及校对规则" class="headerlink" title="字符集及校对规则"></a>字符集及校对规则</h4><h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><p>B+树</p>
-<blockquote>
-<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54102723">漫画：什么是B+树？ - 知乎 (zhihu.com)</a></p>
-</blockquote>
-<ul>
-<li>MyISAM，采用非聚集索引，即B+树叶子节点的data域存放的是数据记录的地址</li>
-<li>InnoDB，采用聚集索引，数据文件本身就是一个索引结构，索引的key是数据表的主键，索引的data保存了完整的数据记录，其余索引为辅助索引，data域是主键的值。<strong>所以主键不宜过长，并且建议自增</strong></li>
-</ul>
-<h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><ul>
-<li><p><strong>事务是逻辑上的⼀组操作，要么都执⾏，要么都不执⾏</strong></p>
-</li>
-<li><p>ACID</p>
-<ul>
-<li>原子性 undo log</li>
-<li>一致性</li>
-<li>隔离性 锁：for update排它锁；lock in share mode共享锁</li>
-<li>持久性 redo log</li>
-</ul>
-</li>
-</ul>
-<h4 id="并发事务带来哪些问题"><a href="#并发事务带来哪些问题" class="headerlink" title="并发事务带来哪些问题"></a>并发事务带来哪些问题</h4><ul>
-<li><p>脏读: a用户修改数据但未提交，b用户读到了a未提交的数据</p>
-</li>
-<li><p>不可重复读: a用户修改数据未提交，b用户读取不到a未提交的数据，此时脏读已解决；b用户不commit，表示b现在还是同一个事务，</p>
-<p>现在a用户提交修改的数据，b用户读取到了修改后的数据，可以发现b用户在同一个事务下读取的两次数据的结果不一样</p>
-</li>
-<li><p>幻读（Phantom read）: a和b都开启一个事务，a用户插入新值前，b用户查询数据，a插入数据并且提交，b再查询数据，此时b两次查询数据一样，不可重复读已解决；</p>
-<p>b继续插入数据和a新插入的数据的主键一样，会发现b插入不了该数据，并报错主键重复，这说明虽然b查询不到该数据，但实际上该数据已经存在</p>
-</li>
-</ul>
-<h4 id="事务隔离级别有哪些-MySQL的默认隔离级别是"><a href="#事务隔离级别有哪些-MySQL的默认隔离级别是" class="headerlink" title="事务隔离级别有哪些?MySQL的默认隔离级别是?"></a>事务隔离级别有哪些?MySQL的默认隔离级别是?</h4>
+<p>其中mapper部分是映射，根据具体情况修改，ResultMap根据情况来添加</p>
+
     </div>
 
     
@@ -330,20 +289,20 @@
 
     <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/MySQL/" rel="tag"># MySQL</a>
+              <a href="/tags/springboot/" rel="tag"># springboot</a>
           </div>
 
         
 
           <div class="post-nav">
             <div class="post-nav-item">
-                <a href="/2021/09/26/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" rel="prev" title="Java多线程">
-                  <i class="fa fa-chevron-left"></i> Java多线程
+                <a href="/2021/10/22/%E6%8B%A6%E6%88%AA%E5%99%A8/" rel="prev" title="拦截器">
+                  <i class="fa fa-chevron-left"></i> 拦截器
                 </a>
             </div>
             <div class="post-nav-item">
-                <a href="/2021/09/27/JVM/" rel="next" title="JVM">
-                  JVM <i class="fa fa-chevron-right"></i>
+                <a href="/2021/10/30/Invalid-bound-statement-not-found-com-example-demo-mapper-CountryMapper-getCountryById/" rel="next" title="Invalid bound statement (not found): com.example.demo.mapper.CountryMapper.getCountryById">
+                  Invalid bound statement (not found): com.example.demo.mapper.CountryMapper.getCountryById <i class="fa fa-chevron-right"></i>
                 </a>
             </div>
           </div>

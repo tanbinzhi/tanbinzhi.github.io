@@ -156,13 +156,13 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">11</span>
+          <span class="site-state-item-count">13</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-tags">
           <a href="/tags/">
-        <span class="site-state-item-count">6</span>
+        <span class="site-state-item-count">7</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
@@ -202,6 +202,192 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://tanbinzhi.github.io/2021/10/30/Invalid-bound-statement-not-found-com-example-demo-mapper-CountryMapper-getCountryById/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="tanbinzhi">
+      <meta itemprop="description" content="加油！陌生人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彬智的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/10/30/Invalid-bound-statement-not-found-com-example-demo-mapper-CountryMapper-getCountryById/" class="post-title-link" itemprop="url">Invalid bound statement (not found): com.example.demo.mapper.CountryMapper.getCountryById</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-10-30 20:02:30 / 修改时间：20:08:21" itemprop="dateCreated datePublished" datetime="2021-10-30T20:02:30+08:00">2021-10-30</time>
+    </span>
+
+  
+    <span id="/2021/10/30/Invalid-bound-statement-not-found-com-example-demo-mapper-CountryMapper-getCountryById/" class="post-meta-item leancloud_visitors" data-flag-title="Invalid bound statement (not found): com.example.demo.mapper.CountryMapper.getCountryById" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/10/30/Invalid-bound-statement-not-found-com-example-demo-mapper-CountryMapper-getCountryById/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://tanbinzhi.github.io/2021/10/30/Invalid-bound-statement-not-found-com-example-demo-mapper-CountryMapper-getCountryById/" class="cy_cmt_count" data-xid="2021/10/30/Invalid-bound-statement-not-found-com-example-demo-mapper-CountryMapper-getCountryById/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>错误提示</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.demo.mapper.CountryMapper.getCountryById</span><br></pre></td></tr></table></figure>
+
+<p><strong>解决办法</strong></p>
+<p>映射有问题，在yml配置文件中加上</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapperLocations: classpath*:/mapper/*.xml</span><br></pre></td></tr></table></figure>
+
+<p>xml映射文件此时是放在类路径下的mapper包下的</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://tanbinzhi.github.io/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="tanbinzhi">
+      <meta itemprop="description" content="加油！陌生人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彬智的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/" class="post-title-link" itemprop="url">mybatis映射文件头</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+      
+
+      <time title="创建时间：2021-10-30 19:56:37 / 修改时间：19:59:18" itemprop="dateCreated datePublished" datetime="2021-10-30T19:56:37+08:00">2021-10-30</time>
+    </span>
+
+  
+    <span id="/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/" class="post-meta-item leancloud_visitors" data-flag-title="mybatis映射文件头" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://tanbinzhi.github.io/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/" class="cy_cmt_count" data-xid="2021/10/30/mybatis映射文件头/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <p><strong>模板</strong></p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span> <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span> <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;org.hand.order33309.infra.mapper.HodrCompanyMapper&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 可根据自己的需求，是否要使用 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;BaseResultMap&quot;</span> <span class="attr">type</span>=<span class="string">&quot;org.hand.order33309.domain.entity.HodrCompany&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;company_id&quot;</span> <span class="attr">property</span>=<span class="string">&quot;companyId&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;company_number&quot;</span> <span class="attr">property</span>=<span class="string">&quot;companyNumber&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;company_name&quot;</span> <span class="attr">property</span>=<span class="string">&quot;companyName&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;enabled_flag&quot;</span> <span class="attr">property</span>=<span class="string">&quot;enabledFlag&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;created_by&quot;</span> <span class="attr">property</span>=<span class="string">&quot;createdBy&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;creation_date&quot;</span> <span class="attr">property</span>=<span class="string">&quot;creationDate&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DATE&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;last_updated_by&quot;</span> <span class="attr">property</span>=<span class="string">&quot;lastUpdatedBy&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;last_update_date&quot;</span> <span class="attr">property</span>=<span class="string">&quot;lastUpdateDate&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DATE&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;object_version_number&quot;</span> <span class="attr">property</span>=<span class="string">&quot;objectVersionNumber&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中mapper部分是映射，根据具体情况修改，ResultMap根据情况来添加</p>
+
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
@@ -1280,300 +1466,6 @@
 </li>
 </ul>
 <h4 id="事务隔离级别有哪些-MySQL的默认隔离级别是"><a href="#事务隔离级别有哪些-MySQL的默认隔离级别是" class="headerlink" title="事务隔离级别有哪些?MySQL的默认隔离级别是?"></a>事务隔离级别有哪些?MySQL的默认隔离级别是?</h4>
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://tanbinzhi.github.io/2021/09/26/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="tanbinzhi">
-      <meta itemprop="description" content="加油！陌生人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="彬智的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/26/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-title-link" itemprop="url">Java多线程</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-09-26 21:49:43" itemprop="dateCreated datePublished" datetime="2021-09-26T21:49:43+08:00">2021-09-26</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-10-09 15:25:07" itemprop="dateModified" datetime="2021-10-09T15:25:07+08:00">2021-10-09</time>
-      </span>
-
-  
-    <span id="/2021/09/26/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="post-meta-item leancloud_visitors" data-flag-title="Java多线程" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2021/09/26/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://tanbinzhi.github.io/2021/09/26/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" class="cy_cmt_count" data-xid="2021/09/26/Java多线程/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h2 id="一、使用线程"><a href="#一、使用线程" class="headerlink" title="一、使用线程"></a>一、使用线程</h2><p>有三种使用线程的方法：</p>
-<ul>
-<li>实现 Runnable 接口；</li>
-<li>实现 Callable 接口；</li>
-<li>继承 Thread 类。</li>
-</ul>
-<h3 id="实现-Runnable-接口"><a href="#实现-Runnable-接口" class="headerlink" title="实现 Runnable 接口"></a>实现 Runnable 接口</h3><p>需要实现接口中的 run() 方法。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyRunnable</span> <span class="keyword">implements</span> <span class="title">Runnable</span> </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="comment">// ...</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>使用 Runnable 实例再创建一个 Thread 实例，然后调用 Thread 实例的 start() 方法来启动线程。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    MyRunnable instance = <span class="keyword">new</span> MyRunnable();</span><br><span class="line">    Thread thread = <span class="keyword">new</span> Thread(instance);</span><br><span class="line">    thread.start();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="http-www-cyc2018-xyz-Java-Java-并发-html-实现-callable-接口-实现-Callable-接口"><a href="#http-www-cyc2018-xyz-Java-Java-并发-html-实现-callable-接口-实现-Callable-接口" class="headerlink" title="[#](http://www.cyc2018.xyz/Java/Java 并发.html#实现-callable-接口)实现 Callable 接口"></a>[#](<a target="_blank" rel="noopener" href="http://www.cyc2018.xyz/Java/Java">http://www.cyc2018.xyz/Java/Java</a> 并发.html#实现-callable-接口)实现 Callable 接口</h3><p>与 Runnable 相比，Callable 可以有返回值，返回值通过 FutureTask 进行封装。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyCallable</span> <span class="keyword">implements</span> <span class="title">Callable</span>&lt;<span class="title">Integer</span>&gt; </span>&#123;</span><br><span class="line">    <span class="meta">@Override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> Integer <span class="title">call</span><span class="params">()</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="number">123</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> <span class="keyword">throws</span> ExecutionException, InterruptedException </span>&#123;</span><br><span class="line">    MyCallable mc = <span class="keyword">new</span> MyCallable();</span><br><span class="line">    FutureTask&lt;Integer&gt; ft = <span class="keyword">new</span> FutureTask&lt;&gt;(mc);</span><br><span class="line">    Thread thread = <span class="keyword">new</span> Thread(ft);</span><br><span class="line">    thread.start();</span><br><span class="line">    System.out.println(ft.get());</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="Daemon"><a href="#Daemon" class="headerlink" title="Daemon"></a>Daemon</h3><p>守护线程是程序运行时在后台提供服务的线程，不属于程序中不可或缺的部分。</p>
-<p>当所有非守护线程结束时，程序也就终止，同时会杀死所有守护线程。</p>
-<p>main() 属于非守护线程。</p>
-<p>在线程启动之前使用 setDaemon() 方法可以将一个线程设置为守护线程。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">    Thread thread = <span class="keyword">new</span> Thread(<span class="keyword">new</span> MyRunnable());</span><br><span class="line">    thread.setDaemon(<span class="keyword">true</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h3 id="sleep"><a href="#sleep" class="headerlink" title="sleep()"></a>sleep()</h3><p>Thread.sleep(millisec) 方法会休眠当前正在执行的线程，millisec 单位为毫秒。</p>
-<p>sleep() 可能会抛出 InterruptedException，因为异常不能跨线程传播回 main() 中，因此必须在本地进行处理。线程中抛出的其它异常也同样需要在本地进行处理。</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">run</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">try</span> &#123;</span><br><span class="line">        Thread.sleep(<span class="number">3000</span>);</span><br><span class="line">    &#125; <span class="keyword">catch</span> (InterruptedException e) &#123;</span><br><span class="line">        e.printStackTrace();</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-      
-    </div>
-
-    
-    
-    
-
-    <footer class="post-footer">
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-</div>
-
-
-
-
-    
-
-
-<div class="post-block">
-  
-  
-
-  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
-    <link itemprop="mainEntityOfPage" href="http://tanbinzhi.github.io/2021/09/25/Java%E9%9B%86%E5%90%88/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.gif">
-      <meta itemprop="name" content="tanbinzhi">
-      <meta itemprop="description" content="加油！陌生人。">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="彬智的个人博客">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          <a href="/2021/09/25/Java%E9%9B%86%E5%90%88/" class="post-title-link" itemprop="url">Java集合</a>
-        </h2>
-
-        <div class="post-meta-container">
-          <div class="post-meta">
-    <span class="post-meta-item">
-      <span class="post-meta-item-icon">
-        <i class="far fa-calendar"></i>
-      </span>
-      <span class="post-meta-item-text">发表于</span>
-
-      <time title="创建时间：2021-09-25 21:38:52" itemprop="dateCreated datePublished" datetime="2021-09-25T21:38:52+08:00">2021-09-25</time>
-    </span>
-      <span class="post-meta-item">
-        <span class="post-meta-item-icon">
-          <i class="far fa-calendar-check"></i>
-        </span>
-        <span class="post-meta-item-text">更新于</span>
-        <time title="修改时间：2021-09-26 21:47:25" itemprop="dateModified" datetime="2021-09-26T21:47:25+08:00">2021-09-26</time>
-      </span>
-
-  
-    <span id="/2021/09/25/Java%E9%9B%86%E5%90%88/" class="post-meta-item leancloud_visitors" data-flag-title="Java集合" title="阅读次数">
-      <span class="post-meta-item-icon">
-        <i class="far fa-eye"></i>
-      </span>
-      <span class="post-meta-item-text">阅读次数：</span>
-      <span class="leancloud-visitors-count"></span>
-    </span>
-  
-  <span class="post-meta-item">
-    
-      <span class="post-meta-item-icon">
-        <i class="far fa-comment"></i>
-      </span>
-      <span class="post-meta-item-text">Changyan：</span>
-    
-    
-      <a title="changyan" href="/2021/09/25/Java%E9%9B%86%E5%90%88/#SOHUCS" itemprop="discussionUrl">
-        <span id="url::http://tanbinzhi.github.io/2021/09/25/Java%E9%9B%86%E5%90%88/" class="cy_cmt_count" data-xid="2021/09/25/Java集合/" itemprop="commentCount"></span>
-      </a>
-    
-  </span>
-  
-  
-</div>
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-          <h4 id="List-Set-Map"><a href="#List-Set-Map" class="headerlink" title="List/Set/Map"></a>List/Set/Map</h4><ul>
-<li>List:存储的元素是有序的、可重复的</li>
-<li>Set:存储的元素是无序的、不可重复的</li>
-<li>Map:使用键值对存储，key无序不可重复，value无序可重复</li>
-</ul>
-<h4 id="Arraylist-与-LinkedList-区别"><a href="#Arraylist-与-LinkedList-区别" class="headerlink" title="Arraylist 与 LinkedList 区别"></a>Arraylist 与 LinkedList 区别</h4><ul>
-<li>ArrayList底层是数组；LinkedList底层是双向链表</li>
-<li><strong>时间角度，增删</strong>ArrayList插入和删除元素的时间复杂度受元素位置影响；LinkedList插入和删除元素时间复杂度与元素位置无关</li>
-<li><strong>时间角度，查</strong>ArrayList支持通过索引快速访问，LinkedList不支持</li>
-<li><strong>空间角度</strong>ArrayList内存空间浪费在数组结尾会预留一定的空间，LinkedList内存空间花费在每一个节点比较多，因为每一个节点除了存放该节点的数据还要存放前驱和后继的引用</li>
-</ul>
-<h4 id="ArrayList-的扩容机制"><a href="#ArrayList-的扩容机制" class="headerlink" title="ArrayList 的扩容机制"></a>ArrayList 的扩容机制</h4><p>无参构造函数创建ArrayList，实际上会创建一个空数组，在增加第一个元素时，会将容量扩容为10</p>
-<p>当增加元素后元素数量大于数组长度时，扩容</p>
-<p>扩容会将容量扩大到原来的1.5倍左右</p>
-<h4 id="HashMap的底层实现"><a href="#HashMap的底层实现" class="headerlink" title="HashMap的底层实现"></a>HashMap的底层实现</h4><p>HashMap通过key计算hashcode，来判断当前元素存放的位置，如果当前位置存在元素，判断hashcode和key是否相同，如果相同就覆盖，如果不同加到链表中；</p>
-<p>当链表长度大于8，如果数组长度小于64，进行数组扩容，如果数组长度不小于64，将链表转为红黑树。</p>
-<h4 id="为什么使用红黑树"><a href="#为什么使用红黑树" class="headerlink" title="为什么使用红黑树"></a>为什么使用红黑树</h4><p>红黑树解决了二叉查找树在某些情况下会退化成线性结构的问题</p>
-<h4 id="HashMap初始容量和扩容"><a href="#HashMap初始容量和扩容" class="headerlink" title="HashMap初始容量和扩容"></a>HashMap初始容量和扩容</h4><p> ① 创建时如果不指定容量初始值，  HashMap 默认的初始化⼤⼩为 16。之后每次扩充，容量变为原来的 2 倍</p>
-<p>② 创建时如果给定了容量初始值，HashMap 会将其扩充为 2 的幂次⽅⼤⼩ </p>
-<h4 id="HashMap的长度为什么是2的幂次方"><a href="#HashMap的长度为什么是2的幂次方" class="headerlink" title="HashMap的长度为什么是2的幂次方"></a>HashMap的长度为什么是2的幂次方</h4><p>通过hashcode来计算在数组的存放位置，可以通过%取余实现，但是<strong>取余(%)操作中如果除数是2 的幂次则等价于与其除数减⼀的与(&amp;)操作。并且采⽤⼆进制位操作 &amp;，相对于%能够提⾼运算效率</strong></p>
-<p><strong>所以HashMap 的⻓度是2的幂次⽅是为了提高通过hashcode判断存放位置的运算效率</strong></p>
-<h4 id="HashMap-和-ConcurrentHashMap-的区别"><a href="#HashMap-和-ConcurrentHashMap-的区别" class="headerlink" title="HashMap 和 ConcurrentHashMap 的区别"></a>HashMap 和 ConcurrentHashMap 的区别</h4><p><strong>底层数据结构</strong>：都是数组+链表/红⿊⼆叉树，当链表⻓度⼤于8，如果数组的⻓度⼩于 64，会选择进⾏数组扩容，否则，将链表(O(N))转化为红⿊树(O(logN))，以减少搜索时间。</p>
-<p><strong>线程是否安全</strong>： HashMap 是⾮线程安全的；ConcurrentHashMap是线程安全的，并发控制使⽤ synchronized 和 CAS 来操作</p>
-<p><strong>对 Null key 和 Null value 的⽀持</strong>： HashMap 可以存储 null 的 key 和 value；ConcurrentHashMap 不允许有 null 键和 null 值，否则会抛出 NullPointerException 。 </p>
-<h4 id="HashMap-和-HashSet区别"><a href="#HashMap-和-HashSet区别" class="headerlink" title="HashMap 和 HashSet区别"></a>HashMap 和 HashSet区别</h4><ul>
-<li>HashMap实现Map接口，HashSet实现Set接口</li>
-<li>HashMap存储键值对，HashSet存储对象</li>
-<li>HashMap调用put()添加元素，HashSet调用add()添加元素</li>
-<li>HashMap 使⽤键计算 hashcode，HashSet 使⽤对象计算 hashcode</li>
-</ul>
-<h4 id="HashSet如何检查重复"><a href="#HashSet如何检查重复" class="headerlink" title="HashSet如何检查重复"></a>HashSet如何检查重复</h4><p>把对象加⼊ HashSet 时，HashSet 会与其他对象的 hashcode 值作⽐较：</p>
-<p>如果 hashcode不同 ， 则没有重复，加入成功。</p>
-<p>如果hashcode 相同，会调⽤ equals() ⽅法来检查对象是否相同。如果相同， 出现重复，加入失败。否则加入成功</p>
-<h4 id="ConcurrentHashMap线程安全的具体实现⽅式-底层具体实现"><a href="#ConcurrentHashMap线程安全的具体实现⽅式-底层具体实现" class="headerlink" title="ConcurrentHashMap线程安全的具体实现⽅式/底层具体实现"></a>ConcurrentHashMap线程安全的具体实现⽅式/底层具体实现</h4><p>数据结构跟 HashMap的结构类似，数组+链表/红⿊⼆叉树。采⽤ CAS 和 synchronized 来保证并发安全</p>
-<p>synchronized 只锁定当前链表或红⿊⼆叉树的⾸节点，这样只要 hashcode 不冲突，就不会产⽣同步，效率提升</p>
-<h4 id="⽐较-HashSet、LinkedHashSet-和-TreeSet-三者的异同"><a href="#⽐较-HashSet、LinkedHashSet-和-TreeSet-三者的异同" class="headerlink" title="⽐较 HashSet、LinkedHashSet 和 TreeSet 三者的异同"></a>⽐较 HashSet、LinkedHashSet 和 TreeSet 三者的异同</h4><ul>
-<li>HashSet 的底层是 HashMap ，线程不安全，可以存 储 null 值</li>
-<li>LinkedHashSet 是 HashSet 的⼦类，迭代顺序即插入顺序</li>
-<li>TreeSet 底层使⽤红⿊树，对插入元素会进行排序，排序的⽅式有⾃然排序和自定义排序</li>
-</ul>
-<h4 id="集合框架底层数据结构总结"><a href="#集合框架底层数据结构总结" class="headerlink" title="集合框架底层数据结构总结"></a>集合框架底层数据结构总结</h4><p><strong>Collection</strong></p>
-<ul>
-<li><p>List </p>
-<ul>
-<li><p>Arraylist ： Object[] 数组 </p>
-</li>
-<li><p>LinkedList ： 双向链表</p>
-</li>
-</ul>
-</li>
-<li><p>Set </p>
-<ul>
-<li>HashSet （⽆序，唯⼀）: 基于 HashMap 实现的，底层采⽤ HashMap 来保存元素 </li>
-<li>LinkedHashSet ： LinkedHashSet 是 HashSet 的⼦类，并且其内部是通过LinkedHashMap 来实现的。</li>
-<li>TreeSet （有序，唯⼀）： 红⿊树(⾃平衡的排序⼆叉树)</li>
-</ul>
-</li>
-<li><p><strong>Map</strong></p>
-<ul>
-<li><p>HashMap ： 数组+链表/红黑树组成，当链表⻓度⼤于 8，如果当前数组的⻓度⼩于 64，进⾏数组扩容，否则，将链表转化为红⿊树</p>
-<p><img src="https://blog-pictures.oss-cn-shanghai.aliyuncs.com/15166327271293.jpg" alt="img"></p>
-</li>
-<li><p>LinkedHashMap ： LinkedHashMap 继承⾃ HashMap ，底层仍然是hash结构即数组+链表/红⿊树。LinkedHashMap 在HashMap的基础上，通过维护一条双向链表，解决了 HashMap 不能保证遍历顺序和插入顺序一致的问题</p>
-<p><img src="https://blog-pictures.oss-cn-shanghai.aliyuncs.com/15166338955699.jpg" alt="img"></p>
-</li>
-<li><p>TreeMap ： 红⿊树（⾃平衡的排序⼆叉树）</p>
-</li>
-</ul>
-</li>
-</ul>
-<h4 id="如何选⽤集合"><a href="#如何选⽤集合" class="headerlink" title="如何选⽤集合"></a>如何选⽤集合</h4><ul>
-<li><p><strong>如果我们需要根据键值获取到元素值就选⽤Map：</strong></p>
-<p>需要排序用 TreeMap ,不需要排序用HashMap ,需要保证线程安全⽤ ConcurrentHashMap 。 </p>
-</li>
-<li><p><strong>当我们只需要存放元素值时，就选List或Set：</strong></p>
-<p>需要保证元素唯⼀时选择TreeSet 或 HashSet ，</p>
-<p>不需要就选择ArrayList 或 LinkedList。</p>
-</li>
-</ul>
-<h4 id="copyonwrite"><a href="#copyonwrite" class="headerlink" title="copyonwrite"></a>copyonwrite</h4><ul>
-<li>Java利用copyonwrite的线程安全集合：CopyOnWriteArrayList，CopyOnWriteArraySet</li>
-<li>和ConcurrentHashMap一样都位于java.util.concurrent包下</li>
-<li>写时复制，适用于读操作远多于写操作的并发场景，写操作在一个副本上执行，不影响读操作的并发，写操作完毕后将原容器的引用指向新的容器。是一种读写分离的思想</li>
-</ul>
-
       
     </div>
 

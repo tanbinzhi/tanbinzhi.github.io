@@ -571,4 +571,32 @@
         <tag>计算机基础</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Invalid bound statement (not found): com.example.demo.mapper.CountryMapper.getCountryById</title>
+    <url>/2021/10/30/Invalid-bound-statement-not-found-com-example-demo-mapper-CountryMapper-getCountryById/</url>
+    <content><![CDATA[<p><strong>错误提示</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">org.apache.ibatis.binding.BindingException: Invalid bound statement (not found): com.example.demo.mapper.CountryMapper.getCountryById</span><br></pre></td></tr></table></figure>
+
+<p><strong>解决办法</strong></p>
+<p>映射有问题，在yml配置文件中加上</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapperLocations: classpath*:/mapper/*.xml</span><br></pre></td></tr></table></figure>
+
+<p>xml映射文件此时是放在类路径下的mapper包下的</p>
+]]></content>
+      <tags>
+        <tag>springboot</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>mybatis映射文件头</title>
+    <url>/2021/10/30/mybatis%E6%98%A0%E5%B0%84%E6%96%87%E4%BB%B6%E5%A4%B4/</url>
+    <content><![CDATA[<p><strong>模板</strong></p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="meta">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt;</span></span><br><span class="line"><span class="meta">&lt;!DOCTYPE <span class="meta-keyword">mapper</span> <span class="meta-keyword">PUBLIC</span> <span class="meta-string">&quot;-//mybatis.org//DTD Mapper 3.0//EN&quot;</span> <span class="meta-string">&quot;http://mybatis.org/dtd/mybatis-3-mapper.dtd&quot;</span> &gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">&quot;org.hand.order33309.infra.mapper.HodrCompanyMapper&quot;</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!-- 可根据自己的需求，是否要使用 --&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">&quot;BaseResultMap&quot;</span> <span class="attr">type</span>=<span class="string">&quot;org.hand.order33309.domain.entity.HodrCompany&quot;</span>&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;company_id&quot;</span> <span class="attr">property</span>=<span class="string">&quot;companyId&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;company_number&quot;</span> <span class="attr">property</span>=<span class="string">&quot;companyNumber&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;company_name&quot;</span> <span class="attr">property</span>=<span class="string">&quot;companyName&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;VARCHAR&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;enabled_flag&quot;</span> <span class="attr">property</span>=<span class="string">&quot;enabledFlag&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;created_by&quot;</span> <span class="attr">property</span>=<span class="string">&quot;createdBy&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;creation_date&quot;</span> <span class="attr">property</span>=<span class="string">&quot;creationDate&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DATE&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;last_updated_by&quot;</span> <span class="attr">property</span>=<span class="string">&quot;lastUpdatedBy&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;last_update_date&quot;</span> <span class="attr">property</span>=<span class="string">&quot;lastUpdateDate&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DATE&quot;</span>/&gt;</span></span><br><span class="line">                    <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">&quot;object_version_number&quot;</span> <span class="attr">property</span>=<span class="string">&quot;objectVersionNumber&quot;</span> <span class="attr">jdbcType</span>=<span class="string">&quot;DECIMAL&quot;</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>其中mapper部分是映射，根据具体情况修改，ResultMap根据情况来添加</p>
+]]></content>
+      <tags>
+        <tag>springboot</tag>
+      </tags>
+  </entry>
 </search>
