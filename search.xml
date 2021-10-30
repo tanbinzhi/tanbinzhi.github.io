@@ -579,9 +579,9 @@
 
 <p><strong>解决办法</strong></p>
 <p>映射有问题，在yml配置文件中加上</p>
-<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapperLocations: classpath*:/mapper/*.xml</span><br></pre></td></tr></table></figure>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line">mybatis:</span><br><span class="line">  mapperLocations: classpath:mapper/*.xml</span><br></pre></td></tr></table></figure>
 
-<p>xml映射文件此时是放在类路径下的mapper包下的</p>
+<p>表示xml映射文件此时是放在类路径下的mapper包下的</p>
 ]]></content>
       <tags>
         <tag>springboot</tag>
