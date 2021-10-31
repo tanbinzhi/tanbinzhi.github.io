@@ -599,4 +599,17 @@
         <tag>springboot</tag>
       </tags>
   </entry>
+  <entry>
+    <title>Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method &#39;POST&#39; not supported]</title>
+    <url>/2021/10/31/Resolved-org-springframework-web-HttpRequestMethodNotSupportedException-Request-method-POST-not-supported/</url>
+    <content><![CDATA[<p><strong>解释</strong><br>不支持POST请求</p>
+<p><strong>问题原因</strong></p>
+<p>看看是否有对应url的post请求代码，比如登录get请求是@GetMapping({“/“,”/login”})</p>
+<p>post请求是@PostMapping(“/login”)</p>
+<p>在用浏览器时没什么问题，但是用postman模拟登录时，注意是没有/的post请求的</p>
+]]></content>
+      <tags>
+        <tag>springboot</tag>
+      </tags>
+  </entry>
 </search>

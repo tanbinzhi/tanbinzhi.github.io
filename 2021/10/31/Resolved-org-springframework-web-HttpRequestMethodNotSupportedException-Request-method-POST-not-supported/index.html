@@ -19,25 +19,28 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"tanbinzhi.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="加油！陌生人。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="彬智的个人博客">
-<meta property="og:url" content="http://tanbinzhi.github.io/archives/page/2/index.html">
+<meta name="description" content="解释不支持POST请求 问题原因 看看是否有对应url的post请求代码，比如登录get请求是@GetMapping({“&#x2F;“,”&#x2F;login”}) post请求是@PostMapping(“&#x2F;login”) 在用浏览器时没什么问题，但是用postman模拟登录时，注意是没有&#x2F;的post请求的">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method &#39;POST&#39; not supported]">
+<meta property="og:url" content="http://tanbinzhi.github.io/2021/10/31/Resolved-org-springframework-web-HttpRequestMethodNotSupportedException-Request-method-POST-not-supported/index.html">
 <meta property="og:site_name" content="彬智的个人博客">
-<meta property="og:description" content="加油！陌生人。">
+<meta property="og:description" content="解释不支持POST请求 问题原因 看看是否有对应url的post请求代码，比如登录get请求是@GetMapping({“&#x2F;“,”&#x2F;login”}) post请求是@PostMapping(“&#x2F;login”) 在用浏览器时没什么问题，但是用postman模拟登录时，注意是没有&#x2F;的post请求的">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2021-10-31T11:29:47.000Z">
+<meta property="article:modified_time" content="2021-10-31T11:34:41.699Z">
 <meta property="article:author" content="tanbinzhi">
+<meta property="article:tag" content="springboot">
 <meta name="twitter:card" content="summary">
 
 
-<link rel="canonical" href="http://tanbinzhi.github.io/archives/page/2/">
+<link rel="canonical" href="http://tanbinzhi.github.io/2021/10/31/Resolved-org-springframework-web-HttpRequestMethodNotSupportedException-Request-method-POST-not-supported/">
 
 
 
-<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":false,"lang":"zh-CN","comments":"","permalink":"","path":"archives/page/2/index.html","title":""}</script>
+<script class="next-config" data-name="page" type="application/json">{"sidebar":"","isHome":false,"isPost":true,"lang":"zh-CN","comments":true,"permalink":"http://tanbinzhi.github.io/2021/10/31/Resolved-org-springframework-web-HttpRequestMethodNotSupportedException-Request-method-POST-not-supported/","path":"2021/10/31/Resolved-org-springframework-web-HttpRequestMethodNotSupportedException-Request-method-POST-not-supported/","title":"Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]"}</script>
 
 <script class="next-config" data-name="calendar" type="application/json">""</script>
-<title>归档 | 彬智的个人博客</title>
+<title>Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported] | 彬智的个人博客</title>
   
 
 
@@ -201,113 +204,116 @@
 </noscript>
 
 
-    <div class="main-inner archive posts-collapse">
+    <div class="main-inner post posts-expand">
 
 
   
-  
-  
-  <div class="post-block">
-    <div class="post-content">
-      <div class="collection-title">
-        <span class="collection-header">嗯..! 目前共计 14 篇日志。 继续努力。</span>
-      </div>
 
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://tanbinzhi.github.io/2021/10/31/Resolved-org-springframework-web-HttpRequestMethodNotSupportedException-Request-method-POST-not-supported/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="tanbinzhi">
+      <meta itemprop="description" content="加油！陌生人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彬智的个人博客">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]
+        </h1>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
       
-    <div class="collection-year">
-      <span class="collection-header">2021</span>
+
+      <time title="创建时间：2021-10-31 19:29:47 / 修改时间：19:34:41" itemprop="dateCreated datePublished" datetime="2021-10-31T19:29:47+08:00">2021-10-31</time>
+    </span>
+
+  
+    <span id="/2021/10/31/Resolved-org-springframework-web-HttpRequestMethodNotSupportedException-Request-method-POST-not-supported/" class="post-meta-item leancloud_visitors" data-flag-title="Resolved [org.springframework.web.HttpRequestMethodNotSupportedException: Request method 'POST' not supported]" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/10/31/Resolved-org-springframework-web-HttpRequestMethodNotSupportedException-Request-method-POST-not-supported/#SOHUCS" itemprop="discussionUrl">
+        <span id="changyan_count_unit" class="post-comments-count hc-comment-count" data-xid="2021/10/31/Resolved-org-springframework-web-HttpRequestMethodNotSupportedException-Request-method-POST-not-supported/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+        <p><strong>解释</strong><br>不支持POST请求</p>
+<p><strong>问题原因</strong></p>
+<p>看看是否有对应url的post请求代码，比如登录get请求是@GetMapping({“/“,”/login”})</p>
+<p>post请求是@PostMapping(“/login”)</p>
+<p>在用浏览器时没什么问题，但是用postman模拟登录时，注意是没有/的post请求的</p>
+
     </div>
 
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-09-26T21:53:44+08:00"
-              content="2021-09-26">
-          09-26
-        </time>
-      </div>
+    
+    
+    
 
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/26/MySQL/" itemprop="url">
-            <span itemprop="name">MySQL</span>
-          </a>
-      </div>
+    <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/springboot/" rel="tag"># springboot</a>
+          </div>
 
-      
-    </header>
+        
+
+          <div class="post-nav">
+            <div class="post-nav-item">
+                <a href="/2021/10/30/Invalid-bound-statement-not-found-com-example-demo-mapper-CountryMapper-getCountryById/" rel="prev" title="Invalid bound statement (not found): com.example.demo.mapper.CountryMapper.getCountryById">
+                  <i class="fa fa-chevron-left"></i> Invalid bound statement (not found): com.example.demo.mapper.CountryMapper.getCountryById
+                </a>
+            </div>
+            <div class="post-nav-item">
+            </div>
+          </div>
+    </footer>
   </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-09-26T21:49:43+08:00"
-              content="2021-09-26">
-          09-26
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/26/Java%E5%A4%9A%E7%BA%BF%E7%A8%8B/" itemprop="url">
-            <span itemprop="name">Java多线程</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-09-25T21:38:52+08:00"
-              content="2021-09-25">
-          09-25
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/25/Java%E9%9B%86%E5%90%88/" itemprop="url">
-            <span itemprop="name">Java集合</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
-
-  <article itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-      <div class="post-meta-container">
-        <time itemprop="dateCreated"
-              datetime="2021-09-24T10:27:05+08:00"
-              content="2021-09-24">
-          09-24
-        </time>
-      </div>
-
-      <div class="post-title">
-          <a class="post-title-link" href="/2021/09/24/%E9%9D%A2%E8%AF%95%E9%9D%9E%E6%8A%80%E6%9C%AF%E9%97%AE%E9%A2%98/" itemprop="url">
-            <span itemprop="name">面试非技术问题</span>
-          </a>
-      </div>
-
-      
-    </header>
-  </article>
+</div>
 
 
-    </div>
-  </div>
-  
-  
-  
-  <nav class="pagination">
-    <a class="extend prev" rel="prev" href="/archives/"><i class="fa fa-angle-left" aria-label="上一页"></i></a><a class="page-number" href="/archives/">1</a><span class="page-number current">2</span>
-  </nav>
 
+
+
+
+    <div class="comments" id="SOHUCS"></div>
 </div>
   </main>
 

@@ -156,7 +156,7 @@
   <nav class="site-state">
       <div class="site-state-item site-state-posts">
         <a href="/archives/">
-          <span class="site-state-item-count">13</span>
+          <span class="site-state-item-count">14</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -202,6 +202,137 @@
 
 
     <div class="main-inner index posts-expand">
+
+    
+
+
+<div class="post-block">
+  
+  
+
+  <article itemscope itemtype="http://schema.org/Article" class="post-content" lang="">
+    <link itemprop="mainEntityOfPage" href="http://tanbinzhi.github.io/2021/09/26/MySQL/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.gif">
+      <meta itemprop="name" content="tanbinzhi">
+      <meta itemprop="description" content="加油！陌生人。">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="彬智的个人博客">
+    </span>
+      <header class="post-header">
+        <h2 class="post-title" itemprop="name headline">
+          <a href="/2021/09/26/MySQL/" class="post-title-link" itemprop="url">MySQL</a>
+        </h2>
+
+        <div class="post-meta-container">
+          <div class="post-meta">
+    <span class="post-meta-item">
+      <span class="post-meta-item-icon">
+        <i class="far fa-calendar"></i>
+      </span>
+      <span class="post-meta-item-text">发表于</span>
+
+      <time title="创建时间：2021-09-26 21:53:44" itemprop="dateCreated datePublished" datetime="2021-09-26T21:53:44+08:00">2021-09-26</time>
+    </span>
+      <span class="post-meta-item">
+        <span class="post-meta-item-icon">
+          <i class="far fa-calendar-check"></i>
+        </span>
+        <span class="post-meta-item-text">更新于</span>
+        <time title="修改时间：2021-10-09 16:09:01" itemprop="dateModified" datetime="2021-10-09T16:09:01+08:00">2021-10-09</time>
+      </span>
+
+  
+    <span id="/2021/09/26/MySQL/" class="post-meta-item leancloud_visitors" data-flag-title="MySQL" title="阅读次数">
+      <span class="post-meta-item-icon">
+        <i class="far fa-eye"></i>
+      </span>
+      <span class="post-meta-item-text">阅读次数：</span>
+      <span class="leancloud-visitors-count"></span>
+    </span>
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Changyan：</span>
+    
+    
+      <a title="changyan" href="/2021/09/26/MySQL/#SOHUCS" itemprop="discussionUrl">
+        <span id="url::http://tanbinzhi.github.io/2021/09/26/MySQL/" class="cy_cmt_count" data-xid="2021/09/26/MySQL/" itemprop="commentCount"></span>
+      </a>
+    
+  </span>
+  
+  
+</div>
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+          <h4 id="什么是MySQL"><a href="#什么是MySQL" class="headerlink" title="什么是MySQL"></a>什么是MySQL</h4><p>MySQL 是⼀种关系型数据库，MySQL的默认端⼝号是3306，开源免费</p>
+<h4 id="存储引擎"><a href="#存储引擎" class="headerlink" title="存储引擎"></a>存储引擎</h4><figure class="highlight sql"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">show</span> engines;#查看MySQL提供的所有存储引擎</span><br></pre></td></tr></table></figure>
+
+<h4 id="MyISAM和InnoDB区别"><a href="#MyISAM和InnoDB区别" class="headerlink" title="MyISAM和InnoDB区别"></a>MyISAM和InnoDB区别</h4><p>⾏级锁 : MyISAM 只有表级锁，⽽InnoDB ⽀持⾏级锁和表级锁,默认为⾏级锁。</p>
+<p>事务： MyISAM不支持事务，但InnoDB⽀持事务。 </p>
+<p>崩溃后的安全恢复：InnoDB有崩溃修复能⼒</p>
+<p>外键： MyISAM不⽀持，InnoDB⽀持。 </p>
+<p>MVCC(多版本并发控制) ：InnoDB ⽀持MVCC。MVCC可以使⽤ 乐 观锁 和 悲观锁来实现</p>
+<h4 id="字符集及校对规则"><a href="#字符集及校对规则" class="headerlink" title="字符集及校对规则"></a>字符集及校对规则</h4><h4 id="索引"><a href="#索引" class="headerlink" title="索引"></a>索引</h4><p>B+树</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/54102723">漫画：什么是B+树？ - 知乎 (zhihu.com)</a></p>
+</blockquote>
+<ul>
+<li>MyISAM，采用非聚集索引，即B+树叶子节点的data域存放的是数据记录的地址</li>
+<li>InnoDB，采用聚集索引，数据文件本身就是一个索引结构，索引的key是数据表的主键，索引的data保存了完整的数据记录，其余索引为辅助索引，data域是主键的值。<strong>所以主键不宜过长，并且建议自增</strong></li>
+</ul>
+<h4 id="事务"><a href="#事务" class="headerlink" title="事务"></a>事务</h4><ul>
+<li><p><strong>事务是逻辑上的⼀组操作，要么都执⾏，要么都不执⾏</strong></p>
+</li>
+<li><p>ACID</p>
+<ul>
+<li>原子性 undo log</li>
+<li>一致性</li>
+<li>隔离性 锁：for update排它锁；lock in share mode共享锁</li>
+<li>持久性 redo log</li>
+</ul>
+</li>
+</ul>
+<h4 id="并发事务带来哪些问题"><a href="#并发事务带来哪些问题" class="headerlink" title="并发事务带来哪些问题"></a>并发事务带来哪些问题</h4><ul>
+<li><p>脏读: a用户修改数据但未提交，b用户读到了a未提交的数据</p>
+</li>
+<li><p>不可重复读: a用户修改数据未提交，b用户读取不到a未提交的数据，此时脏读已解决；b用户不commit，表示b现在还是同一个事务，</p>
+<p>现在a用户提交修改的数据，b用户读取到了修改后的数据，可以发现b用户在同一个事务下读取的两次数据的结果不一样</p>
+</li>
+<li><p>幻读（Phantom read）: a和b都开启一个事务，a用户插入新值前，b用户查询数据，a插入数据并且提交，b再查询数据，此时b两次查询数据一样，不可重复读已解决；</p>
+<p>b继续插入数据和a新插入的数据的主键一样，会发现b插入不了该数据，并报错主键重复，这说明虽然b查询不到该数据，但实际上该数据已经存在</p>
+</li>
+</ul>
+<h4 id="事务隔离级别有哪些-MySQL的默认隔离级别是"><a href="#事务隔离级别有哪些-MySQL的默认隔离级别是" class="headerlink" title="事务隔离级别有哪些?MySQL的默认隔离级别是?"></a>事务隔离级别有哪些?MySQL的默认隔离级别是?</h4>
+      
+    </div>
+
+    
+    
+    
+
+    <footer class="post-footer">
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+</div>
+
+
+
 
     
 
