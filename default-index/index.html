@@ -236,7 +236,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-10-31 19:42:13 / 修改时间：19:51:39" itemprop="dateCreated datePublished" datetime="2021-10-31T19:42:13+08:00">2021-10-31</time>
+      <time title="创建时间：2021-10-31 19:42:13 / 修改时间：19:56:33" itemprop="dateCreated datePublished" datetime="2021-10-31T19:42:13+08:00">2021-10-31</time>
     </span>
 
   
@@ -280,6 +280,8 @@
 <p>在controller层直接返回实例region就可以得到包含自增字段的json数据了，说明可以由实例来调用获取该自增字段的值进行其他操作</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@PostMapping(&quot;/region&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Region <span class="title">save</span><span class="params">(<span class="meta">@RequestBody</span> Region region)</span></span>&#123;</span><br><span class="line">    regionService.save(region);</span><br><span class="line">    <span class="keyword">return</span> region;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><strong>如果采用注解来写sql</strong></p>
+<p>在对应地方加上<code>@Options(useGeneratedKeys=&quot;true&quot; keyProperty=&quot;regionId&quot;)</code>注解</p>
 
       
     </div>

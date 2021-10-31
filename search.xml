@@ -623,6 +623,8 @@
 <p>在controller层直接返回实例region就可以得到包含自增字段的json数据了，说明可以由实例来调用获取该自增字段的值进行其他操作</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@PostMapping(&quot;/region&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Region <span class="title">save</span><span class="params">(<span class="meta">@RequestBody</span> Region region)</span></span>&#123;</span><br><span class="line">    regionService.save(region);</span><br><span class="line">    <span class="keyword">return</span> region;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+<p><strong>如果采用注解来写sql</strong></p>
+<p>在对应地方加上<code>@Options(useGeneratedKeys=&quot;true&quot; keyProperty=&quot;regionId&quot;)</code>注解</p>
 ]]></content>
       <tags>
         <tag>springboot</tag>
