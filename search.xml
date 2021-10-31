@@ -612,4 +612,20 @@
         <tag>springboot</tag>
       </tags>
   </entry>
+  <entry>
+    <title>插入数据后返回内容包含自增的id字段</title>
+    <url>/2021/10/31/%E6%8F%92%E5%85%A5%E6%95%B0%E6%8D%AE%E5%90%8E%E8%BF%94%E5%9B%9E%E5%86%85%E5%AE%B9%E5%8C%85%E5%90%AB%E8%87%AA%E5%A2%9E%E7%9A%84id%E5%AD%97%E6%AE%B5/</url>
+    <content><![CDATA[<p><strong>解决办法</strong></p>
+<p>在xml映射文件里的对应sql标签上加上<code>useGeneratedKeys=&quot;true&quot; keyProperty=&quot;自增字段属性&quot;</code></p>
+<p>比如：在regions中插入字段后想要返回的实体包含自增字段regionId</p>
+<figure class="highlight xml"><table><tr><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">&quot;save&quot;</span> <span class="attr">useGeneratedKeys</span>=<span class="string">&quot;true&quot;</span> <span class="attr">keyProperty</span>=<span class="string">&quot;regionId&quot;</span>&gt;</span></span><br><span class="line">    insert into regions(REGION_NAME) values(#&#123;regionName&#125;);</span><br><span class="line"><span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>在controller层直接返回实例region就可以得到包含自增字段的json数据了，说明可以由实例来调用获取该自增字段的值进行其他操作</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="meta">@PostMapping(&quot;/region&quot;)</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> Region <span class="title">save</span><span class="params">(<span class="meta">@RequestBody</span> Region region)</span></span>&#123;</span><br><span class="line">    regionService.save(region);</span><br><span class="line">    <span class="keyword">return</span> region;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+]]></content>
+      <tags>
+        <tag>springboot</tag>
+      </tags>
+  </entry>
 </search>
