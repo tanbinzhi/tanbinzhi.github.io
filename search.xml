@@ -630,4 +630,16 @@
         <tag>springboot</tag>
       </tags>
   </entry>
+  <entry>
+    <title>mybatis-plus</title>
+    <url>/2021/11/01/mybatis-plus/</url>
+    <content><![CDATA[<p> SqlSessionFactory自动配置好</p>
+<p>mapperLocation自动配置好，有默认值<code>classpath*:/mapper/**/*.xml</code>，表示任意包的类路径下的所有mapper文件夹下任意路径下的所有xml都是sql映射文件，所以以后的映射文件放在类路径下的mapper文件夹下即可</p>
+<p>自动配置好SqlSessionTemplate</p>
+<p>@Mapper标注的接口会被自动扫描</p>
+]]></content>
+      <tags>
+        <tag>springboot</tag>
+      </tags>
+  </entry>
 </search>
