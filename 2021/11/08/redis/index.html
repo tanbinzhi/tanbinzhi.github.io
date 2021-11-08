@@ -19,15 +19,15 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.15.4/css/all.min.css" integrity="sha256-mUZM63G8m73Mcidfrv5E+Y61y7a12O5mW4ezU3bxqW4=" crossorigin="anonymous">
 
 <script class="next-config" data-name="main" type="application/json">{"hostname":"tanbinzhi.github.io","root":"/","images":"/images","scheme":"Pisces","darkmode":false,"version":"8.8.0","exturl":false,"sidebar":{"position":"right","display":"always","padding":18,"offset":12},"copycode":false,"bookmark":{"enable":false,"color":"#222","save":"auto"},"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"stickytabs":false,"motion":{"enable":false,"async":false,"transition":{"post_block":"fadeIn","post_header":"fadeInDown","post_body":"fadeInDown","coll_header":"fadeInLeft","sidebar":"fadeInUp"}},"prism":false,"i18n":{"placeholder":"搜索...","empty":"没有找到任何搜索结果：${query}","hits_time":"找到 ${hits} 个搜索结果（用时 ${time} 毫秒）","hits":"找到 ${hits} 个搜索结果"},"path":"/search.xml","localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false}}</script><script src="/js/config.js"></script>
-<meta name="description" content="redis作用1.在分布式架构下，多台服务器存放session不互通时，用redis能够很好的解决session存放问题，具体可以参考博文，由于redis数据存放在内存(也支持持久化用于备份数据)，会比单独用服务器存储更快，解决了在这个情况下的IO压力，相比于cookie的不安全，session复制的麻烦混乱，用redis单独存储显然更好 https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_">
+<meta name="description" content="redis作用1.在分布式架构下，需要session共享时，用redis能够很好的解决session存放问题，具体可以参考博文，由于redis数据存放在内存(也支持持久化用于备份数据)，会比单独用服务器存储更快，解决了在这个情况下的IO压力，而相比于cookie的不安全，session复制的混乱等方法解决session共享问题，用redis存储显然更好 https:&#x2F;&#x2F;blog.csdn.net&#x2F;">
 <meta property="og:type" content="article">
 <meta property="og:title" content="redis">
 <meta property="og:url" content="http://tanbinzhi.github.io/2021/11/08/redis/index.html">
 <meta property="og:site_name" content="彬智的个人博客">
-<meta property="og:description" content="redis作用1.在分布式架构下，多台服务器存放session不互通时，用redis能够很好的解决session存放问题，具体可以参考博文，由于redis数据存放在内存(也支持持久化用于备份数据)，会比单独用服务器存储更快，解决了在这个情况下的IO压力，相比于cookie的不安全，session复制的麻烦混乱，用redis单独存储显然更好 https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_">
+<meta property="og:description" content="redis作用1.在分布式架构下，需要session共享时，用redis能够很好的解决session存放问题，具体可以参考博文，由于redis数据存放在内存(也支持持久化用于备份数据)，会比单独用服务器存储更快，解决了在这个情况下的IO压力，而相比于cookie的不安全，session复制的混乱等方法解决session共享问题，用redis存储显然更好 https:&#x2F;&#x2F;blog.csdn.net&#x2F;">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2021-11-08T03:34:16.000Z">
-<meta property="article:modified_time" content="2021-11-08T04:14:39.798Z">
+<meta property="article:modified_time" content="2021-11-08T04:32:40.814Z">
 <meta property="article:author" content="tanbinzhi">
 <meta property="article:tag" content="中间件">
 <meta name="twitter:card" content="summary">
@@ -145,7 +145,7 @@
       <div class="sidebar-panel-container">
         <!--noindex-->
         <div class="post-toc-wrap sidebar-panel">
-            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#redis%E4%BD%9C%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">redis作用</span></a></li></ol></div>
+            <div class="post-toc animated"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#redis%E4%BD%9C%E7%94%A8"><span class="nav-number">1.</span> <span class="nav-text">redis作用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#redis%E4%B8%8D%E6%94%AF%E6%8C%81acid%E8%A7%A3%E8%AF%BB"><span class="nav-number">2.</span> <span class="nav-text">redis不支持acid解读</span></a></li></ol></div>
         </div>
         <!--/noindex-->
 
@@ -241,7 +241,7 @@
       <span class="post-meta-item-text">发表于</span>
       
 
-      <time title="创建时间：2021-11-08 11:34:16 / 修改时间：12:14:39" itemprop="dateCreated datePublished" datetime="2021-11-08T11:34:16+08:00">2021-11-08</time>
+      <time title="创建时间：2021-11-08 11:34:16 / 修改时间：12:32:40" itemprop="dateCreated datePublished" datetime="2021-11-08T11:34:16+08:00">2021-11-08</time>
     </span>
 
   
@@ -277,8 +277,17 @@
     
     
     <div class="post-body" itemprop="articleBody">
-        <h4 id="redis作用"><a href="#redis作用" class="headerlink" title="redis作用"></a>redis作用</h4><p>1.在分布式架构下，多台服务器存放session不互通时，用redis能够很好的解决session存放问题，具体可以参考博文，由于redis数据存放在内存(也支持持久化用于备份数据)，会比单独用服务器存储更快，解决了在这个情况下的IO压力，相比于cookie的不安全，session复制的麻烦混乱，用redis单独存储显然更好</p>
+        <h4 id="redis作用"><a href="#redis作用" class="headerlink" title="redis作用"></a>redis作用</h4><p>1.在分布式架构下，需要session共享时，用redis能够很好的解决session存放问题，具体可以参考博文，由于redis数据存放在内存(也支持持久化用于备份数据)，会比单独用服务器存储更快，解决了在这个情况下的IO压力，而相比于cookie的不安全，session复制的混乱等方法解决session共享问题，用redis存储显然更好</p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42561980/article/details/106344407">https://blog.csdn.net/weixin_42561980/article/details/106344407</a></p>
+<p>2.应用场景</p>
+<p>最新N个数据—-通过list实现按自然时间排序的数据</p>
+<p>排行榜—-利用zset</p>
+<p>时效性的数据，如验证码—-expire</p>
+<p>计数器，秒杀—-原子性，自增方法incr,decr</p>
+<p>去除重复数据—-set</p>
+<p>构建队列—-list</p>
+<p>发布订阅消息系统—-pub/sub模式</p>
+<h4 id="redis不支持acid解读"><a href="#redis不支持acid解读" class="headerlink" title="redis不支持acid解读"></a>redis不支持acid解读</h4><p>Redis 具备了一定的原子性，但不支持回滚。 Redis 不具备 ACID 中一致性的概念。(或者说 Redis 在设计时就无视这点) Redis 具备隔离性。 Redis 通过一定策略可以保证持久性。 Redis 和 ACID 纯属站在使用者的角度去思想，Redis 设计更多的是追求简单与高性能，不会受制于传统 ACID 的束缚。<br>链接：<a target="_blank" rel="noopener" href="https://juejin.cn/post/7023753133805273102">https://juejin.cn/post/7023753133805273102</a></p>
 
     </div>
 

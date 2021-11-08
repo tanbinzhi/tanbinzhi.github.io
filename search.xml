@@ -645,8 +645,17 @@
   <entry>
     <title>redis</title>
     <url>/2021/11/08/redis/</url>
-    <content><![CDATA[<h4 id="redis作用"><a href="#redis作用" class="headerlink" title="redis作用"></a>redis作用</h4><p>1.在分布式架构下，多台服务器存放session不互通时，用redis能够很好的解决session存放问题，具体可以参考博文，由于redis数据存放在内存(也支持持久化用于备份数据)，会比单独用服务器存储更快，解决了在这个情况下的IO压力，相比于cookie的不安全，session复制的麻烦混乱，用redis单独存储显然更好</p>
+    <content><![CDATA[<h4 id="redis作用"><a href="#redis作用" class="headerlink" title="redis作用"></a>redis作用</h4><p>1.在分布式架构下，需要session共享时，用redis能够很好的解决session存放问题，具体可以参考博文，由于redis数据存放在内存(也支持持久化用于备份数据)，会比单独用服务器存储更快，解决了在这个情况下的IO压力，而相比于cookie的不安全，session复制的混乱等方法解决session共享问题，用redis存储显然更好</p>
 <p><a href="https://blog.csdn.net/weixin_42561980/article/details/106344407">https://blog.csdn.net/weixin_42561980/article/details/106344407</a></p>
+<p>2.应用场景</p>
+<p>最新N个数据—-通过list实现按自然时间排序的数据</p>
+<p>排行榜—-利用zset</p>
+<p>时效性的数据，如验证码—-expire</p>
+<p>计数器，秒杀—-原子性，自增方法incr,decr</p>
+<p>去除重复数据—-set</p>
+<p>构建队列—-list</p>
+<p>发布订阅消息系统—-pub/sub模式</p>
+<h4 id="redis不支持acid解读"><a href="#redis不支持acid解读" class="headerlink" title="redis不支持acid解读"></a>redis不支持acid解读</h4><p>Redis 具备了一定的原子性，但不支持回滚。 Redis 不具备 ACID 中一致性的概念。(或者说 Redis 在设计时就无视这点) Redis 具备隔离性。 Redis 通过一定策略可以保证持久性。 Redis 和 ACID 纯属站在使用者的角度去思想，Redis 设计更多的是追求简单与高性能，不会受制于传统 ACID 的束缚。<br>链接：<a href="https://juejin.cn/post/7023753133805273102">https://juejin.cn/post/7023753133805273102</a></p>
 ]]></content>
       <tags>
         <tag>中间件</tag>
